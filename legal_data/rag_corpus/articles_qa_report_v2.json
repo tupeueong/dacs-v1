@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-09-27T20:46:40.728419+00:00",
+  "schema_version": "unified_labor.articles.v2",
+  "as_of_date": "2026-09-28",
+  "base_count": 1662,
+  "removed_superseded_count": 361,
+  "removed_by_document": {
+    "58/VBHN-VPQH": 141,
+    "45/2019/QH14": 220
+  },
+  "added_consolidated_count": 361,
+  "final_count": 1662,
+  "source_type_counts": {
+    "phapdien": 907,
+    "official_gazette": 661,
+    "legacy_verified_current": 94
+  },
+  "validation": {
+    "unique_record_ids": true,
+    "unique_legal_keys": true,
+    "all_records_have_source_url": true,
+    "superseded_sources_remaining": 0
+  }
+}

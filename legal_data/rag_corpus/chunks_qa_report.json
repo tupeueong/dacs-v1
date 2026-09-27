@@ -1,0 +1,41 @@
+{
+  "generated_at": "2026-09-27T20:47:03.058796+00:00",
+  "schema_version": "unified_labor.chunks.v2",
+  "article_count": 1662,
+  "chunk_count": 3301,
+  "source_type_counts": {
+    "phapdien": 1756,
+    "official_gazette": 1227,
+    "legacy_verified_current": 318
+  },
+  "articles_split": 619,
+  "max_parts_per_article": 33,
+  "structural_levels": {
+    "article": 1043,
+    "clause": 1356,
+    "clause_part": 68,
+    "point": 579,
+    "point_part": 120,
+    "structural_group": 110,
+    "preamble": 25
+  },
+  "token_length": {
+    "min": 78,
+    "median": 289,
+    "p90": 369,
+    "p95": 378,
+    "p99": 384,
+    "max": 447,
+    "over_target": 28,
+    "over_hard_max": 0
+  },
+  "validation": {
+    "unique_chunk_ids": true,
+    "all_articles_covered": true,
+    "no_empty_chunks": true,
+    "all_chunks_have_source_url": true,
+    "ocr_chunks": 0
+  },
+  "forms_and_attachments_indexed": false,
+  "corpus_as_of": "2026-09-28"
+}

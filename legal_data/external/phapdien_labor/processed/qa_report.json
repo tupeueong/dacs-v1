@@ -1,0 +1,155 @@
+{
+  "schema_version": "phapdien_labor.qa.v1",
+  "generated_at": "2026-09-27T13:39:58.402822+00:00",
+  "input": "C:\\Users\\dang khoa\\Desktop\\dacs\\legal_data\\external\\phapdien_labor\\articles.jsonl",
+  "records": 1407,
+  "attachments_split": 1,
+  "duplicate_record_ids": [],
+  "reused_article_ids": {
+    "Điều 20.4.TT.5.2": 2,
+    "Điều 20.5.TT.74.1": 2,
+    "Điều 20.5.TT.74.2": 2
+  },
+  "duplicate_content_groups": 19,
+  "duplicate_content_records": 98,
+  "qa_flags": {
+    "short_content": 54,
+    "file_name_artifact_removed": 85,
+    "modified_provision": 80,
+    "embedded_attachment_split": 1,
+    "long_content": 1
+  },
+  "content_length": {
+    "min": 51,
+    "median": 626,
+    "p90": 2005,
+    "p95": 2902,
+    "p99": 6086,
+    "max": 10745
+  },
+  "origin_document_count": 156,
+  "top_origin_documents": [
+    [
+      "45/2019/QH14",
+      220
+    ],
+    [
+      "145/2020/NĐ-CP",
+      115
+    ],
+    [
+      "84/2015/QH13",
+      93
+    ],
+    [
+      "69/2020/QH14",
+      75
+    ],
+    [
+      "38/2013/QH13",
+      62
+    ],
+    [
+      "61/2015/NĐ-CP",
+      52
+    ],
+    [
+      "112/2021/NĐ-CP",
+      47
+    ],
+    [
+      "28/2015/NĐ-CP",
+      45
+    ],
+    [
+      "23/2021/NĐ-CP",
+      38
+    ],
+    [
+      "31/2015/NĐ-CP",
+      37
+    ],
+    [
+      "152/2020/NĐ-CP",
+      31
+    ],
+    [
+      "19/2016/TT-BLĐTBXH",
+      28
+    ],
+    [
+      "40/2021/QĐ-TTG",
+      26
+    ],
+    [
+      "74/2019/NĐ-CP",
+      24
+    ],
+    [
+      "01/2022/TT-BLĐTBXH",
+      24
+    ],
+    [
+      "56/2015/TT-BLĐTBXH",
+      22
+    ],
+    [
+      "28/2015/TT-BLĐTBXH",
+      20
+    ],
+    [
+      "61/2020/NĐ-CP",
+      19
+    ],
+    [
+      "20/2021/TT-BLĐTBXH",
+      18
+    ],
+    [
+      "21/2021/TT-BLĐTBXH",
+      17
+    ],
+    [
+      "38/2015/TT-BLĐTBXH",
+      17
+    ],
+    [
+      "70/2023/NĐ-CP",
+      16
+    ],
+    [
+      "97/2022/NĐ-CP",
+      14
+    ],
+    [
+      "09/2020/TT-BLĐTBXH",
+      13
+    ],
+    [
+      "10/2020/TT-BLĐTBXH",
+      12
+    ],
+    [
+      "20/2023/TT-BCT",
+      12
+    ],
+    [
+      "17/2023/TT-BLĐTBXH",
+      12
+    ],
+    [
+      "18/2021/TT-BLĐTBXH",
+      10
+    ],
+    [
+      "12/2022/TT-BCT",
+      10
+    ],
+    [
+      "135/2020/NĐ-CP",
+      9
+    ]
+  ],
+  "source_url_coverage": 1407,
+  "source_note_coverage": 1407
+}

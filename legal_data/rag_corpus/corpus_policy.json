@@ -1,0 +1,88 @@
+{
+  "corpus_id": "vi_labor_law_unified",
+  "as_of_date": "2026-09-27",
+  "status": "building_sources_not_ready_for_final_embedding",
+  "scope": {
+    "primary": [
+      "quan_he_lao_dong",
+      "tien_luong_thoi_gio_lam_viec_nghi_ngoi",
+      "viec_lam_bao_hiem_that_nghiep",
+      "bao_hiem_xa_hoi",
+      "an_toan_ve_sinh_lao_dong",
+      "nguoi_lao_dong_viet_nam_o_nuoc_ngoai"
+    ],
+    "tier_2": [
+      "luc_luong_vu_trang",
+      "tai_chinh_quy_bao_hiem",
+      "phu_luc_bieu_mau"
+    ],
+    "exclude": [
+      "du_thao_chua_co_hieu_luc",
+      "tin_bai_giai_thich_khong_phai_nguon_phap_ly",
+      "ocr_chua_qa",
+      "van_ban_het_hieu_luc_khoi_current_index"
+    ]
+  },
+  "source_precedence": [
+    "official_consolidated_current",
+    "official_current",
+    "phapdien_moj",
+    "legacy_local"
+  ],
+  "canonical_key": [
+    "normalized_document_number",
+    "article_number",
+    "effective_from",
+    "version_id"
+  ],
+  "deduplication": {
+    "exact": "sha256(normalized_text)",
+    "legal_identity": "canonical_key",
+    "conflict_resolution": "higher_source_precedence_then_later_verified_effective_version",
+    "keep_superseded": "history_store_only"
+  },
+  "qa_gates": {
+    "required_metadata": [
+      "document_number",
+      "title",
+      "document_type",
+      "source_url",
+      "issued_date",
+      "effective_from",
+      "status",
+      "article_number"
+    ],
+    "article_sequence_check": true,
+    "heading_body_alignment_check": true,
+    "citation_roundtrip_check": true,
+    "ocr_allowed_in_production": false,
+    "duplicate_current_articles_allowed": false
+  },
+  "chunking": {
+    "unit": "article_first",
+    "preserve": [
+      "chapter",
+      "section",
+      "article",
+      "clause",
+      "point"
+    ],
+    "target_tokens": 384,
+    "hard_max_tokens": 448,
+    "overlap_strategy": "repeat_legal_heading_and_parent_context_not_raw_sliding_overlap",
+    "split_order": [
+      "article",
+      "clause",
+      "point",
+      "sentence"
+    ],
+    "forms_and_large_tables": "separate_index"
+  },
+  "outputs": {
+    "canonical_articles": "legal_data/rag_corpus/articles.jsonl",
+    "chunks": "legal_data/rag_corpus/chunks.jsonl",
+    "qa_report": "legal_data/rag_corpus/qa_report.json",
+    "vectorstore": "legal_data/vectorstore_labor_unified"
+  },
+  "activation_rule": "Only switch retrieve.py to vectorstore_labor_unified after all QA gates pass and smoke retrieval tests preserve citations."
+}

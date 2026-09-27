@@ -1,0 +1,26 @@
+{
+  "ready_for_backend": false,
+  "checks": {
+    "articles_v2": true,
+    "chunks_v2": true,
+    "priority_sources_complete": false,
+    "index_integrity": true,
+    "retrieval_evaluation": true,
+    "unit_tests": true
+  },
+  "pending_current_documents": [
+    "11/2025/TT-BNV",
+    "12/2025/TT-BNV",
+    "56/2025/TT-BYT"
+  ],
+  "index": {
+    "chunk_count": 3301,
+    "chroma_count": 3301,
+    "bm25_count": 3301,
+    "embedding_dimension": 768,
+    "distance_metric": "cosine",
+    "id_sets_match": true,
+    "bm25_order_matches": true
+  },
+  "unit_test_output": "....\n----------------------------------------------------------------------\nRan 4 tests in 0.000s\n\nOK"
+}

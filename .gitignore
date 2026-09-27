@@ -1,0 +1,19 @@
+.env
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Model/download caches and generated indexes
+legal_data/external/cache/
+legal_data/vectorstore/
+legal_data/vectorstore_phapdien_labor/
+legal_data/vectorstore_labor_unified/
+legal_data/vectorstore_versions/
+
+# Temporary build outputs
+*.tmp
+*.staging
+tmp/
+

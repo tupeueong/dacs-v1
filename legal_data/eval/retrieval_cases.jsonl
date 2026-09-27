@@ -1,0 +1,13 @@
+{"id":"in_01","query":"điều kiện hưởng trợ cấp thất nghiệp năm 2026","expected_doc_numbers":["74/2025/QH15","374/2025/NĐ-CP"],"accepted":true}
+{"id":"in_02","query":"cách xác định số tiền và số ngày trốn đóng bảo hiểm xã hội bắt buộc","expected_doc_numbers":["274/2025/NĐ-CP"],"accepted":true}
+{"id":"in_03","query":"xử phạt người sử dụng lao động không ký hợp đồng lao động bằng văn bản","expected_doc_numbers":["12/2022/NĐ-CP"],"accepted":true}
+{"id":"in_04","query":"nguyên tắc quản lý và sử dụng tài chính công đoàn","expected_doc_numbers":["191/2013/NĐ-CP"],"accepted":true}
+{"id":"in_05","query":"đối tượng và điều kiện hưởng trợ cấp hưu trí xã hội","expected_doc_numbers":["176/2025/NĐ-CP"],"accepted":true}
+{"id":"in_06","query":"mức đóng bảo hiểm xã hội tự nguyện","expected_doc_numbers":["159/2025/NĐ-CP","58/VBHN-VPQH"],"accepted":true}
+{"id":"in_07","query":"điều kiện cấp giấy phép hoạt động dịch vụ việc làm","expected_doc_numbers":["352/2025/NĐ-CP"],"accepted":true}
+{"id":"in_08","query":"đăng ký lao động và cập nhật thông tin người lao động","expected_doc_numbers":["318/2025/NĐ-CP"],"accepted":true}
+{"id":"out_01","query":"thuế giá trị gia tăng khi nhập khẩu ô tô","expected_doc_numbers":[],"accepted":false}
+{"id":"out_02","query":"cách nấu phở bò ngon tại nhà","expected_doc_numbers":[],"accepted":false}
+{"id":"out_03","query":"dự báo thời tiết thành phố Hồ Chí Minh ngày mai","expected_doc_numbers":[],"accepted":false}
+{"id":"out_04","query":"cấu hình router wifi cho tốc độ cao","expected_doc_numbers":[],"accepted":false}
+

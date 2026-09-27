@@ -1,0 +1,212 @@
+{
+  "generated_at": "2026-09-27T21:29:37.705627+00:00",
+  "index_dir": "C:\\Users\\dang khoa\\Desktop\\dacs\\legal_data\\vectorstore_versions\\labor-rag-index.v2-00ba349eb2b9-truro7-vn-law-embedding",
+  "case_count": 12,
+  "in_domain_hit_rate": 1.0,
+  "out_of_domain_rejection_rate": 1.0,
+  "thresholds": {
+    "min_in_domain_hit_rate": 0.75,
+    "min_ood_rejection_rate": 1.0
+  },
+  "passed": true,
+  "cases": [
+    {
+      "id": "in_01",
+      "query": "điều kiện hưởng trợ cấp thất nghiệp năm 2026",
+      "expected_doc_numbers": [
+        "74/2025/QH15",
+        "374/2025/NĐ-CP"
+      ],
+      "accepted": true,
+      "actual_accepted": true,
+      "reason": "accepted",
+      "top_score": 0.9908300638198853,
+      "returned_doc_numbers": [
+        "74/2025/QH15",
+        "74/2025/QH15",
+        "74/2025/QH15",
+        "374/2025/NĐ-CP",
+        "74/2025/QH15"
+      ],
+      "passed": true
+    },
+    {
+      "id": "in_02",
+      "query": "cách xác định số tiền và số ngày trốn đóng bảo hiểm xã hội bắt buộc",
+      "expected_doc_numbers": [
+        "274/2025/NĐ-CP"
+      ],
+      "accepted": true,
+      "actual_accepted": true,
+      "reason": "accepted",
+      "top_score": 0.9908574223518372,
+      "returned_doc_numbers": [
+        "274/2025/NĐ-CP",
+        "274/2025/NĐ-CP",
+        "274/2025/NĐ-CP",
+        "274/2025/NĐ-CP",
+        "274/2025/NĐ-CP"
+      ],
+      "passed": true
+    },
+    {
+      "id": "in_03",
+      "query": "xử phạt người sử dụng lao động không ký hợp đồng lao động bằng văn bản",
+      "expected_doc_numbers": [
+        "12/2022/NĐ-CP"
+      ],
+      "accepted": true,
+      "actual_accepted": true,
+      "reason": "accepted",
+      "top_score": 0.9941986799240112,
+      "returned_doc_numbers": [
+        "12/2022/NĐ-CP",
+        "12/2022/NĐ-CP",
+        "12/2022/NĐ-CP",
+        "12/2022/NĐ-CP",
+        "12/2022/NĐ-CP"
+      ],
+      "passed": true
+    },
+    {
+      "id": "in_04",
+      "query": "nguyên tắc quản lý và sử dụng tài chính công đoàn",
+      "expected_doc_numbers": [
+        "191/2013/NĐ-CP"
+      ],
+      "accepted": true,
+      "actual_accepted": true,
+      "reason": "accepted",
+      "top_score": 0.9998948574066162,
+      "returned_doc_numbers": [
+        "191/2013/NĐ-CP",
+        "40/2021/QĐ-TTG",
+        "191/2013/NĐ-CP",
+        "191/2013/NĐ-CP",
+        "191/2013/NĐ-CP"
+      ],
+      "passed": true
+    },
+    {
+      "id": "in_05",
+      "query": "đối tượng và điều kiện hưởng trợ cấp hưu trí xã hội",
+      "expected_doc_numbers": [
+        "176/2025/NĐ-CP"
+      ],
+      "accepted": true,
+      "actual_accepted": true,
+      "reason": "accepted",
+      "top_score": 0.9996280670166016,
+      "returned_doc_numbers": [
+        "176/2025/NĐ-CP",
+        "19/VBHN-VPQH",
+        "158/2025/NĐ-CP",
+        "159/2025/NĐ-CP",
+        "176/2025/NĐ-CP"
+      ],
+      "passed": true
+    },
+    {
+      "id": "in_06",
+      "query": "mức đóng bảo hiểm xã hội tự nguyện",
+      "expected_doc_numbers": [
+        "159/2025/NĐ-CP",
+        "58/VBHN-VPQH"
+      ],
+      "accepted": true,
+      "actual_accepted": true,
+      "reason": "accepted",
+      "top_score": 0.9954482913017273,
+      "returned_doc_numbers": [
+        "19/VBHN-VPQH",
+        "159/2025/NĐ-CP",
+        "159/2025/NĐ-CP",
+        "159/2025/NĐ-CP",
+        "159/2025/NĐ-CP"
+      ],
+      "passed": true
+    },
+    {
+      "id": "in_07",
+      "query": "điều kiện cấp giấy phép hoạt động dịch vụ việc làm",
+      "expected_doc_numbers": [
+        "352/2025/NĐ-CP"
+      ],
+      "accepted": true,
+      "actual_accepted": true,
+      "reason": "accepted",
+      "top_score": 0.9991257786750793,
+      "returned_doc_numbers": [
+        "352/2025/NĐ-CP",
+        "74/2025/QH15",
+        "352/2025/NĐ-CP",
+        "69/2020/QH14",
+        "352/2025/NĐ-CP"
+      ],
+      "passed": true
+    },
+    {
+      "id": "in_08",
+      "query": "đăng ký lao động và cập nhật thông tin người lao động",
+      "expected_doc_numbers": [
+        "318/2025/NĐ-CP"
+      ],
+      "accepted": true,
+      "actual_accepted": true,
+      "reason": "accepted",
+      "top_score": 0.9900376796722412,
+      "returned_doc_numbers": [
+        "318/2025/NĐ-CP",
+        "318/2025/NĐ-CP",
+        "318/2025/NĐ-CP",
+        "318/2025/NĐ-CP",
+        "318/2025/NĐ-CP"
+      ],
+      "passed": true
+    },
+    {
+      "id": "out_01",
+      "query": "thuế giá trị gia tăng khi nhập khẩu ô tô",
+      "expected_doc_numbers": [],
+      "accepted": false,
+      "actual_accepted": false,
+      "reason": "low_retrieval_confidence",
+      "top_score": 0.0017886796267703176,
+      "returned_doc_numbers": [],
+      "passed": true
+    },
+    {
+      "id": "out_02",
+      "query": "cách nấu phở bò ngon tại nhà",
+      "expected_doc_numbers": [],
+      "accepted": false,
+      "actual_accepted": false,
+      "reason": "low_retrieval_confidence",
+      "top_score": 0.010962244123220444,
+      "returned_doc_numbers": [],
+      "passed": true
+    },
+    {
+      "id": "out_03",
+      "query": "dự báo thời tiết thành phố Hồ Chí Minh ngày mai",
+      "expected_doc_numbers": [],
+      "accepted": false,
+      "actual_accepted": false,
+      "reason": "low_retrieval_confidence",
+      "top_score": 0.00021320463565643877,
+      "returned_doc_numbers": [],
+      "passed": true
+    },
+    {
+      "id": "out_04",
+      "query": "cấu hình router wifi cho tốc độ cao",
+      "expected_doc_numbers": [],
+      "accepted": false,
+      "actual_accepted": false,
+      "reason": "low_retrieval_confidence",
+      "top_score": 0.008197681047022343,
+      "returned_doc_numbers": [],
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,163 @@
+{
+  "by_extraction_status": {
+    "already_in_phapdien": 1,
+    "check_phapdien_then_download": 1,
+    "download_required": 7,
+    "download_required_metadata_verify": 3,
+    "native_docx_ready": 2,
+    "native_text_ready": 1,
+    "ocr_rejected_structured_text_required": 1,
+    "structured_text_required": 9
+  },
+  "by_index_decision": {
+    "history_only": 1,
+    "include_after_dedupe_qa": 1,
+    "include_after_qa": 15,
+    "include_after_qa_split_appendices": 1,
+    "include_after_qa_split_appendix": 1,
+    "include_from_phapdien": 1,
+    "include_tier_2_after_qa": 4,
+    "separate_forms_index": 1
+  },
+  "by_status": {
+    "current": 21,
+    "current_consolidated": 3,
+    "superseded_for_current_lookup": 1
+  },
+  "duplicate_keys_resolved": [
+    {
+      "document_number": "58/VBHN-VPQH",
+      "kept_from": "source_registry.jsonl",
+      "replaced_from": "source_registry.current.jsonl"
+    },
+    {
+      "document_number": "41/2024/QH15",
+      "kept_from": "source_registry.jsonl",
+      "replaced_from": "source_registry.current.jsonl"
+    },
+    {
+      "document_number": "74/2025/QH15",
+      "kept_from": "source_registry.jsonl",
+      "replaced_from": "source_registry.current.jsonl"
+    },
+    {
+      "document_number": "158/2025/NĐ-CP",
+      "kept_from": "source_registry.jsonl",
+      "replaced_from": "source_registry.current.jsonl"
+    },
+    {
+      "document_number": "159/2025/NĐ-CP",
+      "kept_from": "source_registry.jsonl",
+      "replaced_from": "source_registry.current.jsonl"
+    },
+    {
+      "document_number": "176/2025/NĐ-CP",
+      "kept_from": "source_registry.jsonl",
+      "replaced_from": "source_registry.current.jsonl"
+    },
+    {
+      "document_number": "274/2025/NĐ-CP",
+      "kept_from": "source_registry.jsonl",
+      "replaced_from": "source_registry.current.jsonl"
+    },
+    {
+      "document_number": "293/2025/NĐ-CP",
+      "kept_from": "source_registry.jsonl",
+      "replaced_from": "source_registry.current.jsonl"
+    },
+    {
+      "document_number": "318/2025/NĐ-CP",
+      "kept_from": "source_registry.jsonl",
+      "replaced_from": "source_registry.current.jsonl"
+    },
+    {
+      "document_number": "338/2025/NĐ-CP",
+      "kept_from": "source_registry.jsonl",
+      "replaced_from": "source_registry.current.jsonl"
+    },
+    {
+      "document_number": "352/2025/NĐ-CP",
+      "kept_from": "source_registry.jsonl",
+      "replaced_from": "source_registry.current.jsonl"
+    },
+    {
+      "document_number": "374/2025/NĐ-CP",
+      "kept_from": "source_registry.jsonl",
+      "replaced_from": "source_registry.current.jsonl"
+    },
+    {
+      "document_number": "374/2025/NĐ-CP:PHU_LUC",
+      "kept_from": "source_registry.jsonl",
+      "replaced_from": "source_registry.current.jsonl"
+    },
+    {
+      "document_number": "143/2024/NĐ-CP",
+      "kept_from": "source_registry_additional.jsonl",
+      "replaced_from": "source_registry.current.jsonl"
+    },
+    {
+      "document_number": "157/2025/NĐ-CP",
+      "kept_from": "source_registry_additional.jsonl",
+      "replaced_from": "source_registry.current.jsonl"
+    },
+    {
+      "document_number": "11/2025/TT-BNV",
+      "kept_from": "source_registry_additional.jsonl",
+      "replaced_from": "source_registry.current.jsonl"
+    },
+    {
+      "document_number": "12/2025/TT-BNV",
+      "kept_from": "source_registry_additional.jsonl",
+      "replaced_from": "source_registry.current.jsonl"
+    },
+    {
+      "document_number": "25/2025/TT-BYT",
+      "kept_from": "source_registry_additional.jsonl",
+      "replaced_from": "source_registry.current.jsonl"
+    },
+    {
+      "document_number": "88/2025/TT-BCA",
+      "kept_from": "source_registry_additional.jsonl",
+      "replaced_from": "source_registry.current.jsonl"
+    },
+    {
+      "document_number": "233/2025/NĐ-CP",
+      "kept_from": "source_registry_additional.jsonl",
+      "replaced_from": "source_registry.current.jsonl"
+    },
+    {
+      "document_number": "107/2025/TT-BTC",
+      "kept_from": "source_registry_additional.jsonl",
+      "replaced_from": "source_registry.current.jsonl"
+    },
+    {
+      "document_number": "26/2025/TT-BNV",
+      "kept_from": "source_registry_update_2026.jsonl",
+      "replaced_from": "source_registry.current.jsonl"
+    },
+    {
+      "document_number": "56/2025/TT-BYT",
+      "kept_from": "source_registry_update_2026.jsonl",
+      "replaced_from": "source_registry.current.jsonl"
+    },
+    {
+      "document_number": "18/VBHN-VPQH",
+      "kept_from": "source_registry_update_2026_v2.jsonl",
+      "replaced_from": "source_registry.current.jsonl"
+    },
+    {
+      "document_number": "19/VBHN-VPQH",
+      "kept_from": "source_registry_update_2026_v2.jsonl",
+      "replaced_from": "source_registry.current.jsonl"
+    }
+  ],
+  "embedding_blocked_count": 23,
+  "record_count": 25,
+  "source_files": [
+    "source_registry.current.jsonl",
+    "source_registry.jsonl",
+    "source_registry_additional.jsonl",
+    "source_registry_update_2026.jsonl",
+    "source_registry_update_2026_v2.jsonl"
+  ]
+}

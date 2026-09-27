@@ -1,0 +1,52 @@
+{
+  "dataset": "tmquan/phapdien-moj-gov-vn",
+  "revision": "a1b6860c821b7142ffe2385178af4e4bb6f86aff",
+  "imported_at": "2026-09-27T13:29:40.523591+00:00",
+  "filter": {
+    "topic_number": 20
+  },
+  "article_count": 1407,
+  "chunk_count": 1892,
+  "empty_rows_skipped": 0,
+  "max_chars": 1500,
+  "subjects": {
+    "Lao động": 477,
+    "Người lao động Việt Nam đi làm việc ở nước ngoài theo hợp đồng": 187,
+    "Việc làm": 393,
+    "An toàn, vệ sinh lao động": 350
+  },
+  "source_files": [
+    {
+      "name": "documents-00000-of-00007.parquet",
+      "size": 3471677
+    },
+    {
+      "name": "documents-00001-of-00007.parquet",
+      "size": 3484746
+    },
+    {
+      "name": "documents-00002-of-00007.parquet",
+      "size": 3968607
+    },
+    {
+      "name": "documents-00003-of-00007.parquet",
+      "size": 3877189
+    },
+    {
+      "name": "documents-00004-of-00007.parquet",
+      "size": 4021877
+    },
+    {
+      "name": "documents-00005-of-00007.parquet",
+      "size": 3739975
+    },
+    {
+      "name": "documents-00006-of-00007.parquet",
+      "size": 2116218
+    }
+  ],
+  "outputs": {
+    "articles": "articles.jsonl",
+    "chunks": "chunks.jsonl"
+  }
+}

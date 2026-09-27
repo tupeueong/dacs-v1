@@ -1,0 +1,27 @@
+{
+  "generated_at": "2026-09-27T17:11:19.326956+00:00",
+  "record_count": 361,
+  "all_documents_qa_passed": true,
+  "documents": [
+    {
+      "document_number": "18/VBHN-VPQH",
+      "source_file": "C:\\Users\\dang khoa\\Desktop\\dacs\\legal_data\\external\\official_labor_2024_2026\\congbao_docx\\18-VBHN-VPQH.docx",
+      "source_sha256": "1386441b1f513defdd55186d7e65b8432dcac87c2e0d78676de25facb9c5e6ff",
+      "article_count": 220,
+      "expected_articles": 220,
+      "continuous_article_numbers": true,
+      "no_empty_articles": true,
+      "passed": true
+    },
+    {
+      "document_number": "19/VBHN-VPQH",
+      "source_file": "C:\\Users\\dang khoa\\Desktop\\dacs\\legal_data\\external\\official_labor_2024_2026\\congbao_docx\\19-VBHN-VPQH.docx",
+      "source_sha256": "3137d6714250eef438c6213799d29b03eb400e8e32a1cf45187b32c42c2283f5",
+      "article_count": 141,
+      "expected_articles": 141,
+      "continuous_article_numbers": true,
+      "no_empty_articles": true,
+      "passed": true
+    }
+  ]
+}

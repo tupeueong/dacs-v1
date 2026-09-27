@@ -1,0 +1,24 @@
+{
+  "schema_version": "phapdien_labor.finalize.v1",
+  "generated_at": "2026-09-27T13:52:05.407428+00:00",
+  "input": "C:\\Users\\dang khoa\\Desktop\\dacs\\legal_data\\external\\phapdien_labor\\processed\\articles.clean.jsonl",
+  "output": "C:\\Users\\dang khoa\\Desktop\\dacs\\legal_data\\external\\phapdien_labor\\processed\\articles.final.jsonl",
+  "record_count": 1407,
+  "changed_records": 36,
+  "attachment_filename_lines_removed": 58,
+  "duplicate_content_groups": 19,
+  "duplicate_content_records": 98,
+  "content_length": {
+    "min": 51,
+    "median": 625,
+    "p95": 2889,
+    "max": 10745
+  },
+  "validation": {
+    "unique_record_ids": true,
+    "no_empty_content": true,
+    "no_attachment_filename_lines": true,
+    "all_source_urls_valid": true,
+    "all_records_have_origin_document": true
+  }
+}
