@@ -22,7 +22,10 @@ có 3.301 vector, 768 chiều, khoảng cách cosine và chỉ số BM25 tương
   dạng hóa theo văn bản/điều.
 - `generate_safe.py`: sinh câu trả lời claim-level có kiểm chứng trích dẫn,
   phân tích mâu thuẫn nguồn và tự dựng Markdown gồm Kết luận, Phân tích,
-  Căn cứ pháp lý và Nguồn.
+  Căn cứ pháp lý và Nguồn. Bộ phân xử bảo thủ kiểm tra trạng thái hiệu lực,
+  điều khoản thay thế/bãi bỏ và thứ bậc văn bản; nếu metadata không đủ thì
+  đánh dấu `unresolved` và chặn kết luận dứt khoát. Lỗi Gemini tạm thời được
+  retry có giới hạn, còn lỗi request/schema không bị che giấu bằng retry.
 - `build_index_v4.py`: build/promote index an toàn trên Windows.
 - `verify_index_v2.py`: kiểm tra hash, ID, BM25 và vector index.
 - `evaluate_retrieval_v2.py`: chạy bộ đánh giá retrieval.

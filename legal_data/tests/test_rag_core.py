@@ -229,6 +229,73 @@ class ConflictResolverTests(unittest.TestCase):
         self.assertFalse(resolved["resolved"])
         self.assertEqual(resolved["strategy"], "unresolved")
 
+    def test_explicit_replacement_relation_selects_replacing_document(self):
+        evidence = {
+            "new": {
+                "chunk_id": "new",
+                "doc_number": "03/2026/TT-BNV",
+                "status": "current",
+                "text": "Thông tư này thay thế Thông tư 01/2025/TT-BNV.",
+            },
+            "old": {
+                "chunk_id": "old",
+                "doc_number": "01/2025/TT-BNV",
+                "status": "current",
+                "text": "Quy định cũ còn xuất hiện trong nguồn truy hồi.",
+            },
+        }
+        conflicts = [
+            {
+                "description": "Hai thông tư quy định khác nhau.",
+                "resolution": "Cần dùng văn bản thay thế.",
+                "strategy": "later_effective_rule",
+                "citations": [
+                    {"chunk_id": "new", "quote": "Thông tư này thay thế Thông tư 01/2025/TT-BNV."},
+                    {"chunk_id": "old", "quote": "Quy định cũ còn xuất hiện trong nguồn truy hồi."},
+                ],
+            }
+        ]
+        review = build_deterministic_legal_review(evidence, conflicts)
+        resolved = review["conflicts"][0]
+        self.assertTrue(resolved["resolved"])
+        self.assertEqual(resolved["strategy"], "explicit_replacement")
+        self.assertEqual(resolved["preferred_doc_number"], "03/2026/TT-BNV")
+        self.assertTrue(review["safe_to_conclude"])
+
+    def test_inactive_source_is_flagged_and_blocks_definitive_answer(self):
+        evidence = {
+            "current": {
+                "chunk_id": "current",
+                "doc_number": "19/VBHN-VPQH",
+                "status": "current_consolidated",
+                "text": "Current social insurance rule.",
+            },
+            "stale": {
+                "chunk_id": "stale",
+                "doc_number": "41/2024/QH15",
+                "status": "superseded_for_current_lookup",
+                "text": "Superseded social insurance rule.",
+            },
+        }
+        conflicts = [
+            {
+                "description": "The current and superseded sources differ.",
+                "resolution": "Use the current consolidated source.",
+                "strategy": "later_effective_rule",
+                "citations": [
+                    {"chunk_id": "current", "quote": "Current social insurance rule."},
+                    {"chunk_id": "stale", "quote": "Superseded social insurance rule."},
+                ],
+            }
+        ]
+        review = build_deterministic_legal_review(evidence, conflicts)
+        resolved = review["conflicts"][0]
+        self.assertTrue(resolved["resolved"])
+        self.assertEqual(resolved["strategy"], "current_status")
+        self.assertEqual(resolved["preferred_doc_number"], "19/VBHN-VPQH")
+        self.assertTrue(review["warnings"])
+        self.assertFalse(review["safe_to_conclude"])
+
 
 if __name__ == "__main__":
     unittest.main()

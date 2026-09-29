@@ -6,6 +6,7 @@ import json
 import math
 import os
 import re
+import time
 from datetime import date
 from pathlib import Path
 from typing import Any
@@ -22,6 +23,13 @@ MIN_QUOTE_CHARS = 20
 MIN_QUOTE_KEYWORDS = 3
 MIN_CLAIM_KEYWORD_RATIO = 0.35
 DEFAULT_TIMEOUT_SECONDS = 45
+MAX_GENERATION_ATTEMPTS = 3
+RETRYABLE_GENERATION_ERRORS = {
+    "gemini_timeout",
+    "gemini_rate_limited",
+    "gemini_unavailable",
+    "gemini_network_error",
+}
 WORD_RE = re.compile(r"\d+(?:[.,/]\d+)*|[^\W_]+", re.UNICODE)
 NUMBER_RE = re.compile(r"\d+(?:[.,/]\d+)*")
 STOPWORDS = {
@@ -920,22 +928,31 @@ Yêu cầu chất lượng:
 - Nếu không có mâu thuẫn trực tiếp giữa các nguồn, trả conflicts=[].
 - Nếu có mâu thuẫn, phải trích cả hai phía; không đủ căn cứ phân xử thì strategy=unresolved.
 """
-        try:
-            response = self.client.models.generate_content(
-                model=self.model_name,
-                contents=prompt,
-                config={
-                    "system_instruction": SYSTEM_PROMPT,
-                    "response_mime_type": "application/json",
-                    "response_json_schema": RESPONSE_JSON_SCHEMA,
-                    "max_output_tokens": 3000,
-                    "temperature": 0.1,
-                },
-            )
-            response_text = getattr(response, "text", None)
-        except Exception as error:
-            code, message = _classify_api_error(error)
-            return _failure(code, message, retrieval=retrieval_summary)
+        response = None
+        response_text = None
+        for attempt in range(MAX_GENERATION_ATTEMPTS):
+            try:
+                response = self.client.models.generate_content(
+                    model=self.model_name,
+                    contents=prompt,
+                    config={
+                        "system_instruction": SYSTEM_PROMPT,
+                        "response_mime_type": "application/json",
+                        "response_json_schema": RESPONSE_JSON_SCHEMA,
+                        "max_output_tokens": 3000,
+                        "temperature": 0.1,
+                    },
+                )
+                response_text = getattr(response, "text", None)
+                break
+            except Exception as error:
+                code, message = _classify_api_error(error)
+                if (
+                    code not in RETRYABLE_GENERATION_ERRORS
+                    or attempt == MAX_GENERATION_ATTEMPTS - 1
+                ):
+                    return _failure(code, message, retrieval=retrieval_summary)
+                time.sleep(0.75 * (2**attempt))
 
         if not isinstance(response_text, str) or not response_text.strip():
             code = "model_refusal" if _looks_refused(response) else "empty_model_response"
