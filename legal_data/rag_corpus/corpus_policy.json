@@ -1,7 +1,8 @@
 {
   "corpus_id": "vi_labor_law_unified",
-  "as_of_date": "2026-09-27",
-  "status": "building_sources_not_ready_for_final_embedding",
+  "as_of_date": "2026-09-29",
+  "status": "index_verified_pending_gpu_benchmark",
+  "blocking_documents": [],
   "scope": {
     "primary": [
       "quan_he_lao_dong",
@@ -81,8 +82,8 @@
   "outputs": {
     "canonical_articles": "legal_data/rag_corpus/articles.jsonl",
     "chunks": "legal_data/rag_corpus/chunks.jsonl",
-    "qa_report": "legal_data/rag_corpus/qa_report.json",
-    "vectorstore": "legal_data/vectorstore_labor_unified"
+    "qa_report": "legal_data/rag_corpus/articles_qa_report.json",
+    "vectorstore_pointer": "legal_data/vectorstore_versions/current.json"
   },
-  "activation_rule": "Only switch retrieve.py to vectorstore_labor_unified after all QA gates pass and smoke retrieval tests preserve citations."
+  "activation_rule": "Only promote a versioned index after verify_index_v2.py passes; pre_backend_gate.py must also match the benchmark fingerprint to the active corpus, index and case suite."
 }

@@ -1,26 +1,23 @@
 {
-  "ready_for_backend": false,
+  "ready_for_backend": true,
   "checks": {
-    "articles_v2": true,
+    "articles_canonical": true,
     "chunks_v2": true,
-    "priority_sources_complete": false,
+    "priority_sources_complete": true,
     "index_integrity": true,
     "retrieval_evaluation": true,
     "unit_tests": true
   },
-  "pending_current_documents": [
-    "11/2025/TT-BNV",
-    "12/2025/TT-BNV",
-    "56/2025/TT-BYT"
-  ],
+  "pending_priority_documents": [],
   "index": {
-    "chunk_count": 3301,
-    "chroma_count": 3301,
-    "bm25_count": 3301,
+    "chunk_count": 3410,
+    "chroma_count": 3410,
+    "bm25_count": 3410,
     "embedding_dimension": 768,
     "distance_metric": "cosine",
     "id_sets_match": true,
     "bm25_order_matches": true
   },
-  "unit_test_output": "..........\n----------------------------------------------------------------------\nRan 10 tests in 0.004s\n\nOK"
+  "index_error": null,
+  "unit_test_output": ".......................\n----------------------------------------------------------------------\nRan 23 tests in 0.009s\n\nOK"
 }

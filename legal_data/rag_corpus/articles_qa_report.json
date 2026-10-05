@@ -1,17 +1,26 @@
 {
-  "generated_at": "2026-09-27T17:53:18.894082+00:00",
-  "as_of_date": "2026-09-27",
+  "generated_at": "2026-09-29T08:21:11.769935+00:00",
+  "as_of_date": "2026-09-29",
   "inputs": {
     "phapdien": 1407,
     "official_gazette": 441,
+    "official_consolidated_2026": 361,
+    "official_registry_mirror": 52,
     "legacy_verified_current": 94
   },
-  "phapdien_kept": 1205,
-  "phapdien_excluded": 202,
-  "canonical_article_count": 1662,
+  "phapdien_kept": 981,
+  "excluded_by_source": {
+    "phapdien": 426,
+    "official_gazette": 141
+  },
+  "official_gazette_kept": 300,
+  "official_consolidated_2026_kept": 361,
+  "official_registry_mirror_kept": 52,
+  "canonical_article_count": 1710,
   "source_type_counts": {
-    "phapdien": 1127,
-    "official_gazette": 441,
+    "phapdien": 903,
+    "official_gazette": 661,
+    "official_registry_mirror": 52,
     "legacy_verified_current": 94
   },
   "legal_key_conflicts": [],
@@ -135,11 +144,6 @@
       "hash": "dcfd6bd81b164ddeb13885a07b184b4257f075f830a2023951e8f43099ad6dfe",
       "kept": "57bb4740a398e1d6",
       "discarded": "24b7f06fd552a25d"
-    },
-    {
-      "hash": "2811a30637a689feade89c57fe7ed21af235bd1269a5a31287043a2c5e3c0cfb",
-      "kept": "6fa4a420eab877d8",
-      "discarded": "9fb177fa4bc95aad"
     },
     {
       "hash": "23361db8135aa2405fb88e9aeeca08462a075beaadc748b038f416440b7ef1d3",
@@ -405,9 +409,20 @@
       "hash": "b6b9e0885e2ae99c590a74488419af12e44c5a28262e4c8b15cb0b5ce282d6a5",
       "kept": "a3ae2df87ba5b35a",
       "discarded": "534b14e25be60e00"
+    },
+    {
+      "hash": "2811a30637a689feade89c57fe7ed21af235bd1269a5a31287043a2c5e3c0cfb",
+      "kept": "c20d94a17aa33ad3",
+      "discarded": "6fa4a420eab877d8"
     }
   ],
   "fully_repealed_or_replaced_documents": {
+    "01/2016/TT-BLĐTBXH": "11/2025/TT-BNV",
+    "59/2015/TT-BLĐTBXH": "12/2025/TT-BNV",
+    "06/2021/TT-BLĐTBXH": "12/2025/TT-BNV",
+    "28/2016/TT-BYT": "56/2025/TT-BYT",
+    "45/2019/QH14": "18/VBHN-VPQH",
+    "58/VBHN-VPQH": "19/VBHN-VPQH",
     "38/2013/QH13": "74/2025/QH15",
     "58/2014/QH13": "58/VBHN-VPQH",
     "33/2016/NĐ-CP": "157/2025/NĐ-CP",
@@ -437,6 +452,1987 @@
   ],
   "excluded_records": [
     {
+      "source": "phapdien",
+      "record_id": "d429b2aaa13010b1",
+      "article_id": "Điều 20.2.LQ.1",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "46fc5fa9d752e1e5",
+      "article_id": "Điều 20.2.LQ.10",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "ee261a281aa95e95",
+      "article_id": "Điều 20.2.LQ.100",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "8c4268a7ab7fcdad",
+      "article_id": "Điều 20.2.LQ.101",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "9710593b5dc8f384",
+      "article_id": "Điều 20.2.LQ.102",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "4e3c623257ac610b",
+      "article_id": "Điều 20.2.LQ.103",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "44d64065a6187089",
+      "article_id": "Điều 20.2.LQ.104",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "bbbd02845fbad376",
+      "article_id": "Điều 20.2.LQ.105",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "104c00813cc4ba5b",
+      "article_id": "Điều 20.2.LQ.106",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "0f54c37e69002c73",
+      "article_id": "Điều 20.2.LQ.107",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "b022e800b918db46",
+      "article_id": "Điều 20.2.LQ.108",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "6a92d700ff3f2fd9",
+      "article_id": "Điều 20.2.LQ.109",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "51238b5667e44516",
+      "article_id": "Điều 20.2.LQ.11",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "f59a5cbf8d733271",
+      "article_id": "Điều 20.2.LQ.110",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "59c7ccd3813a0740",
+      "article_id": "Điều 20.2.LQ.111",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "e26ded7bb21cbbe2",
+      "article_id": "Điều 20.2.LQ.112",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "cb9e9a34deddad25",
+      "article_id": "Điều 20.2.LQ.113",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "df31c72fa0129b48",
+      "article_id": "Điều 20.2.LQ.114",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "8c88e3db409720be",
+      "article_id": "Điều 20.2.LQ.115",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "ef5e626d5cda6ee6",
+      "article_id": "Điều 20.2.LQ.116",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "a05d2931932cd7ab",
+      "article_id": "Điều 20.2.LQ.117",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "1a4aa643239bcaec",
+      "article_id": "Điều 20.2.LQ.118",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "fbbf11638a83791d",
+      "article_id": "Điều 20.2.LQ.119",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "2291aee33a9db511",
+      "article_id": "Điều 20.2.LQ.12",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "ae14792bf63857d3",
+      "article_id": "Điều 20.2.LQ.120",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "e6e8b091398102be",
+      "article_id": "Điều 20.2.LQ.121",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "4f0397f37d229fe1",
+      "article_id": "Điều 20.2.LQ.122",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "c2da119dec5aae31",
+      "article_id": "Điều 20.2.LQ.123",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "cfdb5ba4342833cd",
+      "article_id": "Điều 20.2.LQ.124",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "36e1d1d1876aa352",
+      "article_id": "Điều 20.2.LQ.125",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "8a786a3532ba23be",
+      "article_id": "Điều 20.2.LQ.126",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "3bcd16c89ca5555f",
+      "article_id": "Điều 20.2.LQ.127",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "c84b18563d8d4720",
+      "article_id": "Điều 20.2.LQ.128",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "45e9dc6a0f7e0390",
+      "article_id": "Điều 20.2.LQ.129",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "144f8898e8887097",
+      "article_id": "Điều 20.2.LQ.13",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "3ef02936e66b8fd9",
+      "article_id": "Điều 20.2.LQ.130",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "460870e191ae9dd2",
+      "article_id": "Điều 20.2.LQ.131",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "507058c7328041a0",
+      "article_id": "Điều 20.2.LQ.132",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "a99c1f90597dd696",
+      "article_id": "Điều 20.2.LQ.133",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "d484285878dea3d9",
+      "article_id": "Điều 20.2.LQ.134",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "ebb5d2756ac37315",
+      "article_id": "Điều 20.2.LQ.135",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "fffd56153d4f8997",
+      "article_id": "Điều 20.2.LQ.136",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "090df43fe4ab351f",
+      "article_id": "Điều 20.2.LQ.137",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "7d8be888662282d6",
+      "article_id": "Điều 20.2.LQ.138",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "37b3957f23f485b9",
+      "article_id": "Điều 20.2.LQ.139",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "ec30f156196b5f0a",
+      "article_id": "Điều 20.2.LQ.14",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "68871ab98c52b09a",
+      "article_id": "Điều 20.2.LQ.140",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "e608a0201ed7e071",
+      "article_id": "Điều 20.2.LQ.141",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "ec70ff00a37d3af6",
+      "article_id": "Điều 20.2.LQ.142",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "5669c468f6225a87",
+      "article_id": "Điều 20.2.LQ.143",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "1a54f31762f470a9",
+      "article_id": "Điều 20.2.LQ.144",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "b450a629de3aff70",
+      "article_id": "Điều 20.2.LQ.145",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "aa29b3b85c71d0f2",
+      "article_id": "Điều 20.2.LQ.146",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "ce84cb6187bb17dc",
+      "article_id": "Điều 20.2.LQ.147",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "ce546966b0d618a5",
+      "article_id": "Điều 20.2.LQ.148",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "a67dc27443fa3a4c",
+      "article_id": "Điều 20.2.LQ.149",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "6916a418f3a1c197",
+      "article_id": "Điều 20.2.LQ.15",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "3006b5bf4eb87a9a",
+      "article_id": "Điều 20.2.LQ.150",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "6f8923c7077a7e29",
+      "article_id": "Điều 20.2.LQ.151",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "66171324e2b96dc0",
+      "article_id": "Điều 20.2.LQ.152",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "2b8fadc8da3591ef",
+      "article_id": "Điều 20.2.LQ.153",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "1c3cd03407f4168c",
+      "article_id": "Điều 20.2.LQ.154",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "5fe35be84c45de55",
+      "article_id": "Điều 20.2.LQ.155",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "436201d5ec450436",
+      "article_id": "Điều 20.2.LQ.156",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "f2842001dd5ee8ce",
+      "article_id": "Điều 20.2.LQ.157",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "cc6cba19e7065c37",
+      "article_id": "Điều 20.2.LQ.158",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "897fd403bbb40b3a",
+      "article_id": "Điều 20.2.LQ.159",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "44e3193a6bac8a18",
+      "article_id": "Điều 20.2.LQ.16",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "aff4351729448d27",
+      "article_id": "Điều 20.2.LQ.160",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "7799642986d7f25c",
+      "article_id": "Điều 20.2.LQ.161",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "0425a70e91017fbc",
+      "article_id": "Điều 20.2.LQ.162",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "9ca617d4ef07f5ee",
+      "article_id": "Điều 20.2.LQ.163",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "865c3c9aaf9b8c6b",
+      "article_id": "Điều 20.2.LQ.164",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "a188ddc1c91bf7b9",
+      "article_id": "Điều 20.2.LQ.165",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "3e6bd41332a0436e",
+      "article_id": "Điều 20.2.LQ.166",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "21b9611cb2df9d22",
+      "article_id": "Điều 20.2.LQ.167",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "417c7a6e43e54607",
+      "article_id": "Điều 20.2.LQ.168",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "b781045f4bd29fd4",
+      "article_id": "Điều 20.2.LQ.169",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "61ef304dc0679d74",
+      "article_id": "Điều 20.2.LQ.17",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "cd2f656526b1e59b",
+      "article_id": "Điều 20.2.LQ.170",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "91807e2627d04f6e",
+      "article_id": "Điều 20.2.LQ.171",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "5f28765b088e14d4",
+      "article_id": "Điều 20.2.LQ.172",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "c3320dd790dcd0b1",
+      "article_id": "Điều 20.2.LQ.173",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "7f5b2a7c0f8d77fd",
+      "article_id": "Điều 20.2.LQ.174",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "9e1d34cef2346bbe",
+      "article_id": "Điều 20.2.LQ.175",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "352d1c22233b1cb6",
+      "article_id": "Điều 20.2.LQ.176",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "66893686156cd267",
+      "article_id": "Điều 20.2.LQ.177",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "3e893772f6e0c065",
+      "article_id": "Điều 20.2.LQ.178",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "ee8270f7d22e1d2e",
+      "article_id": "Điều 20.2.LQ.179",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "cebce4c5077c21b7",
+      "article_id": "Điều 20.2.LQ.18",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "13c70e206c8bb9a7",
+      "article_id": "Điều 20.2.LQ.180",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "dddb084283f7212d",
+      "article_id": "Điều 20.2.LQ.181",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "bdb3869439118f75",
+      "article_id": "Điều 20.2.LQ.182",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "1fc347db69e9e975",
+      "article_id": "Điều 20.2.LQ.183",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "57f468d7b3adce83",
+      "article_id": "Điều 20.2.LQ.184",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "b999eadbe05c0c88",
+      "article_id": "Điều 20.2.LQ.185",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "ac7b277d41cf103a",
+      "article_id": "Điều 20.2.LQ.186",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "c3c87b9f1e438791",
+      "article_id": "Điều 20.2.LQ.187",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "2b7ec790341489b5",
+      "article_id": "Điều 20.2.LQ.188",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "f02ced12c1c1b33f",
+      "article_id": "Điều 20.2.LQ.189",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "c5b6409039a687b4",
+      "article_id": "Điều 20.2.LQ.19",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "9ddb1cdb5fc32982",
+      "article_id": "Điều 20.2.LQ.190",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "9f84b35a09abdc46",
+      "article_id": "Điều 20.2.LQ.191",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "9534611c0847d495",
+      "article_id": "Điều 20.2.LQ.192",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "074a50ee8d199d08",
+      "article_id": "Điều 20.2.LQ.193",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "82f09af51b5179ea",
+      "article_id": "Điều 20.2.LQ.194",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "3d613dbb1b491a96",
+      "article_id": "Điều 20.2.LQ.195",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "c6eb64c3e4b576f5",
+      "article_id": "Điều 20.2.LQ.196",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "1f1d2fae671d93c3",
+      "article_id": "Điều 20.2.LQ.197",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "46cc2eb8c03ff8cd",
+      "article_id": "Điều 20.2.LQ.198",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "9fc1a0cc6580fd1c",
+      "article_id": "Điều 20.2.LQ.199",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "d179ade0d08a642b",
+      "article_id": "Điều 20.2.LQ.2",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "d09540ec45c97476",
+      "article_id": "Điều 20.2.LQ.20",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "8f88c9fd549f63c7",
+      "article_id": "Điều 20.2.LQ.200",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "bded408949cb59d0",
+      "article_id": "Điều 20.2.LQ.201",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "e667820bef46207d",
+      "article_id": "Điều 20.2.LQ.202",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "6d5aff8aa01918b7",
+      "article_id": "Điều 20.2.LQ.203",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "300d2a247dce53c9",
+      "article_id": "Điều 20.2.LQ.204",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "0e124b44b3e92176",
+      "article_id": "Điều 20.2.LQ.205",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "cffecb1c2de12766",
+      "article_id": "Điều 20.2.LQ.206",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "fcc30c8a48ce8841",
+      "article_id": "Điều 20.2.LQ.207",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "acbf4fc00624c06e",
+      "article_id": "Điều 20.2.LQ.208",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "4a12fdd1b0cd2853",
+      "article_id": "Điều 20.2.LQ.209",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "d5af2f5fa2f2b6a0",
+      "article_id": "Điều 20.2.LQ.21",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "1f0fa0003484bc6c",
+      "article_id": "Điều 20.2.LQ.210",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "032c2457c175aa01",
+      "article_id": "Điều 20.2.LQ.211",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "48b05cf60c11fc18",
+      "article_id": "Điều 20.2.LQ.212",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "51aaed5653337f2e",
+      "article_id": "Điều 20.2.LQ.213",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "bdba9ed8c9ec0bdb",
+      "article_id": "Điều 20.2.LQ.214",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "d7314d880ada2597",
+      "article_id": "Điều 20.2.LQ.215",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "fde27e21d05c2ed3",
+      "article_id": "Điều 20.2.LQ.216",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "9e1fd7600f7a8b62",
+      "article_id": "Điều 20.2.LQ.217",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "bf8d2b580ed068a8",
+      "article_id": "Điều 20.2.LQ.218",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "a5217f7863005649",
+      "article_id": "Điều 20.2.LQ.219",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "7e3bf5b7a407af74",
+      "article_id": "Điều 20.2.LQ.22",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "1446b958995f9d0f",
+      "article_id": "Điều 20.2.LQ.220",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "26252d6e027d054b",
+      "article_id": "Điều 20.2.LQ.23",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "d5dac727afe37722",
+      "article_id": "Điều 20.2.LQ.24",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "2b679841640296e6",
+      "article_id": "Điều 20.2.LQ.25",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "4df97e1b7cc745c2",
+      "article_id": "Điều 20.2.LQ.26",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "5b18adec17c36c31",
+      "article_id": "Điều 20.2.LQ.27",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "9658bf1a5d5803ab",
+      "article_id": "Điều 20.2.LQ.28",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "a4d330754c6e0a3a",
+      "article_id": "Điều 20.2.LQ.29",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "091474e35032fa10",
+      "article_id": "Điều 20.2.LQ.3",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "8896ae3db4932664",
+      "article_id": "Điều 20.2.LQ.30",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "5f39def91ca4e18e",
+      "article_id": "Điều 20.2.LQ.31",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "ba61fff77fb57970",
+      "article_id": "Điều 20.2.LQ.32",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "516f8d6fb8c85565",
+      "article_id": "Điều 20.2.LQ.33",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "799321552ff72969",
+      "article_id": "Điều 20.2.LQ.34",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "a71b84bfd9f05561",
+      "article_id": "Điều 20.2.LQ.35",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "fabdb46449889455",
+      "article_id": "Điều 20.2.LQ.36",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "403dfe15ff4d3462",
+      "article_id": "Điều 20.2.LQ.37",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "30854619e8c98e0e",
+      "article_id": "Điều 20.2.LQ.38",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "a6cb138c53d17ec4",
+      "article_id": "Điều 20.2.LQ.39",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "26ea5b8d80f81cb3",
+      "article_id": "Điều 20.2.LQ.4",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "dd9be97995259aa5",
+      "article_id": "Điều 20.2.LQ.40",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "48efe6e9ba4166b9",
+      "article_id": "Điều 20.2.LQ.41",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "12a8abadb85a5b29",
+      "article_id": "Điều 20.2.LQ.42",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "55f30603eef4ff3c",
+      "article_id": "Điều 20.2.LQ.43",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "124b5244d149a5cf",
+      "article_id": "Điều 20.2.LQ.44",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "7b3c91798058ad7a",
+      "article_id": "Điều 20.2.LQ.45",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "db127471bdc11be7",
+      "article_id": "Điều 20.2.LQ.46",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "7a0b36bafe946635",
+      "article_id": "Điều 20.2.LQ.47",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "79de3a2f369410e8",
+      "article_id": "Điều 20.2.LQ.48",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "922715b1b697d73e",
+      "article_id": "Điều 20.2.LQ.49",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "05ecce4e12c17dde",
+      "article_id": "Điều 20.2.LQ.5",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "9e026a3e715a7d88",
+      "article_id": "Điều 20.2.LQ.50",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "60a9e086eb28280d",
+      "article_id": "Điều 20.2.LQ.51",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "ff19c351995adb5e",
+      "article_id": "Điều 20.2.LQ.52",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "558eed0a875cde74",
+      "article_id": "Điều 20.2.LQ.53",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "f583bd5bb72135cc",
+      "article_id": "Điều 20.2.LQ.54",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "ebb286e6a55657cd",
+      "article_id": "Điều 20.2.LQ.55",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "6d355d5d9337c0bf",
+      "article_id": "Điều 20.2.LQ.56",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "f350b3b18903ffa1",
+      "article_id": "Điều 20.2.LQ.57",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "34364301c863ce0f",
+      "article_id": "Điều 20.2.LQ.58",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "52b0003f5b45aa34",
+      "article_id": "Điều 20.2.LQ.59",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "69c971fce73930ae",
+      "article_id": "Điều 20.2.LQ.6",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "ecf7c8f5fa706fc1",
+      "article_id": "Điều 20.2.LQ.60",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "fd8172e74ae855a1",
+      "article_id": "Điều 20.2.LQ.61",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "198374db27211979",
+      "article_id": "Điều 20.2.LQ.62",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "c8356d0b460785bd",
+      "article_id": "Điều 20.2.LQ.63",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "9bbe5c3ca6cca130",
+      "article_id": "Điều 20.2.LQ.64",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "b00af47f9d6c86c1",
+      "article_id": "Điều 20.2.LQ.65",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "76b7227be1eaa01c",
+      "article_id": "Điều 20.2.LQ.66",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "9609f3d12663ef74",
+      "article_id": "Điều 20.2.LQ.67",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "fd1b0e0325604c41",
+      "article_id": "Điều 20.2.LQ.68",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "4b1679260f0a3670",
+      "article_id": "Điều 20.2.LQ.69",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "c5c9621c1e1f56be",
+      "article_id": "Điều 20.2.LQ.7",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "9e4354868a05269f",
+      "article_id": "Điều 20.2.LQ.70",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "dd763dccef3836f4",
+      "article_id": "Điều 20.2.LQ.71",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "6be97989fe9d7deb",
+      "article_id": "Điều 20.2.LQ.72",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "efde82cd1512193c",
+      "article_id": "Điều 20.2.LQ.73",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "d1366a73c148aaab",
+      "article_id": "Điều 20.2.LQ.74",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "ecc56c017709bc1e",
+      "article_id": "Điều 20.2.LQ.75",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "b9984871414c3f9b",
+      "article_id": "Điều 20.2.LQ.76",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "9e11a8a88d041614",
+      "article_id": "Điều 20.2.LQ.77",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "a854a8d7c134c9d5",
+      "article_id": "Điều 20.2.LQ.78",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "e816e45e9c9b3ba6",
+      "article_id": "Điều 20.2.LQ.79",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "959075108285dc18",
+      "article_id": "Điều 20.2.LQ.8",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "9e77224000d76c7f",
+      "article_id": "Điều 20.2.LQ.80",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "f3efdd7341ec78ff",
+      "article_id": "Điều 20.2.LQ.81",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "2ffbc3df0763fe2e",
+      "article_id": "Điều 20.2.LQ.82",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "48211bd31d08dd8e",
+      "article_id": "Điều 20.2.LQ.83",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "9df8e99bf90a36ba",
+      "article_id": "Điều 20.2.LQ.84",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "2bb16ba4f3b8a835",
+      "article_id": "Điều 20.2.LQ.85",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "e61bb9af67ba6113",
+      "article_id": "Điều 20.2.LQ.86",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "76b8dcb90089ce0c",
+      "article_id": "Điều 20.2.LQ.87",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "e365cd6467528a33",
+      "article_id": "Điều 20.2.LQ.88",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "22941f042b8330a1",
+      "article_id": "Điều 20.2.LQ.89",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "864c0d9d0012670a",
+      "article_id": "Điều 20.2.LQ.9",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "a339492f32c98926",
+      "article_id": "Điều 20.2.LQ.90",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "fef7028128aeb2c9",
+      "article_id": "Điều 20.2.LQ.91",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "380bbd40478a6c4c",
+      "article_id": "Điều 20.2.LQ.92",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "024a38d8f2c82785",
+      "article_id": "Điều 20.2.LQ.93",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "4a2912afdf6cfc1d",
+      "article_id": "Điều 20.2.LQ.94",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "b675391ae5a43563",
+      "article_id": "Điều 20.2.LQ.95",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "de21efc82656825c",
+      "article_id": "Điều 20.2.LQ.96",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "b76f9544da7132c1",
+      "article_id": "Điều 20.2.LQ.97",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "b1af8f81ef75cdae",
+      "article_id": "Điều 20.2.LQ.98",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "0afdd804aba96ecd",
+      "article_id": "Điều 20.2.LQ.99",
+      "origin_document_numbers": [
+        "45/2019/QH14"
+      ],
+      "reason": "fully_repealed_or_replaced:45/2019/QH14"
+    },
+    {
+      "source": "phapdien",
       "record_id": "aa5a00b506d1d453",
       "article_id": "Điều 20.2.NĐ.2.3",
       "origin_document_numbers": [
@@ -445,6 +2441,7 @@
       "reason": "partly_repealed_record:135/2020/NĐ-CP:Điều 20.2.NĐ.2.3"
     },
     {
+      "source": "phapdien",
       "record_id": "d9bf49b3da17835e",
       "article_id": "Điều 20.2.NĐ.2.7",
       "origin_document_numbers": [
@@ -453,6 +2450,7 @@
       "reason": "partly_repealed_record:135/2020/NĐ-CP:Điều 20.2.NĐ.2.7"
     },
     {
+      "source": "phapdien",
       "record_id": "96a8f12ababa21ad",
       "article_id": "Điều 20.2.NĐ.2.8",
       "origin_document_numbers": [
@@ -461,6 +2459,7 @@
       "reason": "partly_repealed_record:135/2020/NĐ-CP:Điều 20.2.NĐ.2.8"
     },
     {
+      "source": "phapdien",
       "record_id": "9c4be4632a57c622",
       "article_id": "Điều 20.4.LQ.1",
       "origin_document_numbers": [
@@ -469,6 +2468,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "d9d74237544e1302",
       "article_id": "Điều 20.4.LQ.10",
       "origin_document_numbers": [
@@ -477,6 +2477,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "849b102ab520f4bd",
       "article_id": "Điều 20.4.LQ.11",
       "origin_document_numbers": [
@@ -485,6 +2486,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "ab54cb72ba394a40",
       "article_id": "Điều 20.4.LQ.12",
       "origin_document_numbers": [
@@ -493,6 +2495,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "3a3ccd0f8985a546",
       "article_id": "Điều 20.4.LQ.13",
       "origin_document_numbers": [
@@ -501,6 +2504,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "de2a65097f8b6f55",
       "article_id": "Điều 20.4.LQ.14",
       "origin_document_numbers": [
@@ -509,6 +2513,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "b20b667d0cffb9c2",
       "article_id": "Điều 20.4.LQ.15",
       "origin_document_numbers": [
@@ -517,6 +2522,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "9775d5befecf5962",
       "article_id": "Điều 20.4.LQ.16",
       "origin_document_numbers": [
@@ -525,6 +2531,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "f8997577194eef86",
       "article_id": "Điều 20.4.LQ.17",
       "origin_document_numbers": [
@@ -533,6 +2540,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "e9bbf71f7444f11f",
       "article_id": "Điều 20.4.LQ.18",
       "origin_document_numbers": [
@@ -541,6 +2549,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "b56199a4fee944c4",
       "article_id": "Điều 20.4.LQ.19",
       "origin_document_numbers": [
@@ -549,6 +2558,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "853b29916f94c355",
       "article_id": "Điều 20.4.LQ.2",
       "origin_document_numbers": [
@@ -557,6 +2567,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "c68dfdc5f4ed0e29",
       "article_id": "Điều 20.4.LQ.20",
       "origin_document_numbers": [
@@ -565,6 +2576,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "e9fdd27865a42a28",
       "article_id": "Điều 20.4.LQ.21",
       "origin_document_numbers": [
@@ -573,6 +2585,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "5469f087699d3df5",
       "article_id": "Điều 20.4.LQ.22",
       "origin_document_numbers": [
@@ -581,6 +2594,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "509933d580da6be0",
       "article_id": "Điều 20.4.LQ.23",
       "origin_document_numbers": [
@@ -589,6 +2603,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "6aed0d3351600128",
       "article_id": "Điều 20.4.LQ.24",
       "origin_document_numbers": [
@@ -597,6 +2612,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "c9adca08e7ec3fd1",
       "article_id": "Điều 20.4.LQ.25",
       "origin_document_numbers": [
@@ -605,6 +2621,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "1e94a720fbd07394",
       "article_id": "Điều 20.4.LQ.26",
       "origin_document_numbers": [
@@ -613,6 +2630,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "ed687a100ec39aa6",
       "article_id": "Điều 20.4.LQ.27",
       "origin_document_numbers": [
@@ -621,6 +2639,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "cf9f42d165de6aa5",
       "article_id": "Điều 20.4.LQ.28",
       "origin_document_numbers": [
@@ -629,6 +2648,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "db11561f47a74dcb",
       "article_id": "Điều 20.4.LQ.29",
       "origin_document_numbers": [
@@ -637,6 +2657,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "b9fae23a2f6e09a1",
       "article_id": "Điều 20.4.LQ.3",
       "origin_document_numbers": [
@@ -645,6 +2666,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "67381c9d3d139de1",
       "article_id": "Điều 20.4.LQ.30",
       "origin_document_numbers": [
@@ -653,6 +2675,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "8c79ba80b654fd84",
       "article_id": "Điều 20.4.LQ.31",
       "origin_document_numbers": [
@@ -661,6 +2684,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "9a6a562a43a956c9",
       "article_id": "Điều 20.4.LQ.32",
       "origin_document_numbers": [
@@ -669,6 +2693,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "4a5850abcfa61582",
       "article_id": "Điều 20.4.LQ.33",
       "origin_document_numbers": [
@@ -677,6 +2702,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "c8416626ed6bafad",
       "article_id": "Điều 20.4.LQ.34",
       "origin_document_numbers": [
@@ -685,6 +2711,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "6a38836c34a191ef",
       "article_id": "Điều 20.4.LQ.35",
       "origin_document_numbers": [
@@ -693,6 +2720,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "df3ee25115a13b14",
       "article_id": "Điều 20.4.LQ.36",
       "origin_document_numbers": [
@@ -701,6 +2729,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "5101156e27fb670d",
       "article_id": "Điều 20.4.LQ.37",
       "origin_document_numbers": [
@@ -709,6 +2738,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "47c285ffa13c8b93",
       "article_id": "Điều 20.4.LQ.38",
       "origin_document_numbers": [
@@ -717,6 +2747,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "7c26c09f5a3ee4d1",
       "article_id": "Điều 20.4.LQ.39",
       "origin_document_numbers": [
@@ -725,6 +2756,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "5cd57300f78faae1",
       "article_id": "Điều 20.4.LQ.4",
       "origin_document_numbers": [
@@ -733,6 +2765,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "0058cda75cbfcfec",
       "article_id": "Điều 20.4.LQ.40",
       "origin_document_numbers": [
@@ -741,6 +2774,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "ae4092d4f8e9b296",
       "article_id": "Điều 20.4.LQ.41",
       "origin_document_numbers": [
@@ -749,6 +2783,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "6573ce888cfd4d70",
       "article_id": "Điều 20.4.LQ.42",
       "origin_document_numbers": [
@@ -757,6 +2792,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "f4ec32c478d82b89",
       "article_id": "Điều 20.4.LQ.43",
       "origin_document_numbers": [
@@ -765,6 +2801,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "9a40dfbdf0b96fdc",
       "article_id": "Điều 20.4.LQ.44",
       "origin_document_numbers": [
@@ -773,6 +2810,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "dc397a4bcbf72044",
       "article_id": "Điều 20.4.LQ.45",
       "origin_document_numbers": [
@@ -781,6 +2819,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "5735d2d40448b27b",
       "article_id": "Điều 20.4.LQ.46",
       "origin_document_numbers": [
@@ -789,6 +2828,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "e6573f7909a2056c",
       "article_id": "Điều 20.4.LQ.47",
       "origin_document_numbers": [
@@ -797,6 +2837,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "fb84c6663987f271",
       "article_id": "Điều 20.4.LQ.48",
       "origin_document_numbers": [
@@ -805,6 +2846,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "2d173bdba23b2112",
       "article_id": "Điều 20.4.LQ.49",
       "origin_document_numbers": [
@@ -813,6 +2855,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "06f0531ebd0d2e8d",
       "article_id": "Điều 20.4.LQ.5",
       "origin_document_numbers": [
@@ -821,6 +2864,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "1d3f52ce7d870588",
       "article_id": "Điều 20.4.LQ.50",
       "origin_document_numbers": [
@@ -829,6 +2873,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "c677bbc7cb0b705e",
       "article_id": "Điều 20.4.LQ.51",
       "origin_document_numbers": [
@@ -837,6 +2882,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "802839f663fa9f7e",
       "article_id": "Điều 20.4.LQ.52",
       "origin_document_numbers": [
@@ -845,6 +2891,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "86267c628d5870d1",
       "article_id": "Điều 20.4.LQ.53",
       "origin_document_numbers": [
@@ -853,6 +2900,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "62a95cf17630ecb0",
       "article_id": "Điều 20.4.LQ.54",
       "origin_document_numbers": [
@@ -861,6 +2909,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "508604033a2445a4",
       "article_id": "Điều 20.4.LQ.55",
       "origin_document_numbers": [
@@ -869,6 +2918,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "5845f2f25fbef32b",
       "article_id": "Điều 20.4.LQ.56",
       "origin_document_numbers": [
@@ -877,6 +2927,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "9ad914454a9d8b68",
       "article_id": "Điều 20.4.LQ.57",
       "origin_document_numbers": [
@@ -885,6 +2936,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "70cae3ef90eccbfb",
       "article_id": "Điều 20.4.LQ.58",
       "origin_document_numbers": [
@@ -893,6 +2945,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "3233bc478d57718f",
       "article_id": "Điều 20.4.LQ.59",
       "origin_document_numbers": [
@@ -901,6 +2954,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "dde563bc46ab8c81",
       "article_id": "Điều 20.4.LQ.6",
       "origin_document_numbers": [
@@ -909,6 +2963,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "fd74adc8064387f1",
       "article_id": "Điều 20.4.LQ.60",
       "origin_document_numbers": [
@@ -917,6 +2972,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "241312ef58a33002",
       "article_id": "Điều 20.4.LQ.61",
       "origin_document_numbers": [
@@ -925,6 +2981,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "95c92ff933476751",
       "article_id": "Điều 20.4.LQ.62",
       "origin_document_numbers": [
@@ -933,6 +2990,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "43c8a7a0de4e7192",
       "article_id": "Điều 20.4.LQ.7",
       "origin_document_numbers": [
@@ -941,6 +2999,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "ed22d26eb12b5d44",
       "article_id": "Điều 20.4.LQ.8",
       "origin_document_numbers": [
@@ -949,6 +3008,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "099570f08a6b92a8",
       "article_id": "Điều 20.4.LQ.9",
       "origin_document_numbers": [
@@ -957,6 +3017,7 @@
       "reason": "fully_repealed_or_replaced:38/2013/QH13"
     },
     {
+      "source": "phapdien",
       "record_id": "88594270dcf28fe1",
       "article_id": "Điều 20.4.NĐ.3.1",
       "origin_document_numbers": [
@@ -965,6 +3026,7 @@
       "reason": "fully_repealed_or_replaced:28/2015/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "c33604b4cf203a32",
       "article_id": "Điều 20.4.NĐ.3.10",
       "origin_document_numbers": [
@@ -974,6 +3036,7 @@
       "reason": "fully_repealed_or_replaced:28/2015/NĐ-CP,61/2020/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "f5d94913e6a1a36b",
       "article_id": "Điều 20.4.NĐ.3.11",
       "origin_document_numbers": [
@@ -982,6 +3045,7 @@
       "reason": "fully_repealed_or_replaced:28/2015/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "fb6e0abe85a1f9df",
       "article_id": "Điều 20.4.NĐ.3.12",
       "origin_document_numbers": [
@@ -991,6 +3055,7 @@
       "reason": "fully_repealed_or_replaced:28/2015/NĐ-CP,61/2020/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "374124d2c037e780",
       "article_id": "Điều 20.4.NĐ.3.13",
       "origin_document_numbers": [
@@ -999,6 +3064,7 @@
       "reason": "fully_repealed_or_replaced:28/2015/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "648346e14b59ad58",
       "article_id": "Điều 20.4.NĐ.3.14",
       "origin_document_numbers": [
@@ -1008,6 +3074,7 @@
       "reason": "fully_repealed_or_replaced:28/2015/NĐ-CP,61/2020/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "3ab969c10f9aeded",
       "article_id": "Điều 20.4.NĐ.3.15",
       "origin_document_numbers": [
@@ -1016,6 +3083,7 @@
       "reason": "fully_repealed_or_replaced:28/2015/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "43c8b3a65ba034f5",
       "article_id": "Điều 20.4.NĐ.3.16",
       "origin_document_numbers": [
@@ -1025,6 +3093,7 @@
       "reason": "fully_repealed_or_replaced:28/2015/NĐ-CP,61/2020/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "a91f180755e861a1",
       "article_id": "Điều 20.4.NĐ.3.17",
       "origin_document_numbers": [
@@ -1034,6 +3103,7 @@
       "reason": "fully_repealed_or_replaced:28/2015/NĐ-CP,61/2020/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "3828cc7d62e6d3bb",
       "article_id": "Điều 20.4.NĐ.3.18",
       "origin_document_numbers": [
@@ -1043,6 +3113,7 @@
       "reason": "fully_repealed_or_replaced:28/2015/NĐ-CP,61/2020/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "c07147a5651078b2",
       "article_id": "Điều 20.4.NĐ.3.19",
       "origin_document_numbers": [
@@ -1051,6 +3122,7 @@
       "reason": "fully_repealed_or_replaced:28/2015/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "bc75f93fb665eee1",
       "article_id": "Điều 20.4.NĐ.3.2",
       "origin_document_numbers": [
@@ -1059,6 +3131,7 @@
       "reason": "fully_repealed_or_replaced:28/2015/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "b857efa2646eb227",
       "article_id": "Điều 20.4.NĐ.3.20",
       "origin_document_numbers": [
@@ -1067,6 +3140,7 @@
       "reason": "fully_repealed_or_replaced:28/2015/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "706d6349d1112afd",
       "article_id": "Điều 20.4.NĐ.3.21",
       "origin_document_numbers": [
@@ -1076,6 +3150,7 @@
       "reason": "fully_repealed_or_replaced:28/2015/NĐ-CP,61/2020/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "f2cdd23cef3058bc",
       "article_id": "Điều 20.4.NĐ.3.22",
       "origin_document_numbers": [
@@ -1085,6 +3160,7 @@
       "reason": "fully_repealed_or_replaced:28/2015/NĐ-CP,61/2020/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "bc5cdb9bf8ce37d2",
       "article_id": "Điều 20.4.NĐ.3.23",
       "origin_document_numbers": [
@@ -1094,6 +3170,7 @@
       "reason": "fully_repealed_or_replaced:28/2015/NĐ-CP,61/2020/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "aa67c00423ad4059",
       "article_id": "Điều 20.4.NĐ.3.24",
       "origin_document_numbers": [
@@ -1103,6 +3180,7 @@
       "reason": "fully_repealed_or_replaced:28/2015/NĐ-CP,61/2020/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "f67e8367fc7968f6",
       "article_id": "Điều 20.4.NĐ.3.25",
       "origin_document_numbers": [
@@ -1112,6 +3190,7 @@
       "reason": "fully_repealed_or_replaced:28/2015/NĐ-CP,61/2020/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "f081d924756ba6e9",
       "article_id": "Điều 20.4.NĐ.3.26",
       "origin_document_numbers": [
@@ -1120,6 +3199,7 @@
       "reason": "fully_repealed_or_replaced:28/2015/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "4efcfb9acf9aecbf",
       "article_id": "Điều 20.4.NĐ.3.27",
       "origin_document_numbers": [
@@ -1128,6 +3208,7 @@
       "reason": "fully_repealed_or_replaced:28/2015/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "b16ad01a32b6ff74",
       "article_id": "Điều 20.4.NĐ.3.28",
       "origin_document_numbers": [
@@ -1136,6 +3217,7 @@
       "reason": "fully_repealed_or_replaced:28/2015/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "247297f66ee87562",
       "article_id": "Điều 20.4.NĐ.3.29",
       "origin_document_numbers": [
@@ -1144,6 +3226,7 @@
       "reason": "fully_repealed_or_replaced:28/2015/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "87583ac2c7439dee",
       "article_id": "Điều 20.4.NĐ.3.3",
       "origin_document_numbers": [
@@ -1153,6 +3236,7 @@
       "reason": "fully_repealed_or_replaced:28/2015/NĐ-CP,61/2020/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "9133da57019e9b28",
       "article_id": "Điều 20.4.NĐ.3.30",
       "origin_document_numbers": [
@@ -1162,6 +3246,7 @@
       "reason": "fully_repealed_or_replaced:28/2015/NĐ-CP,61/2020/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "7d42fe8131845725",
       "article_id": "Điều 20.4.NĐ.3.31",
       "origin_document_numbers": [
@@ -1170,6 +3255,7 @@
       "reason": "fully_repealed_or_replaced:28/2015/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "fc0a7129eed45462",
       "article_id": "Điều 20.4.NĐ.3.32",
       "origin_document_numbers": [
@@ -1178,6 +3264,7 @@
       "reason": "fully_repealed_or_replaced:28/2015/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "cfd50be2c7850b2c",
       "article_id": "Điều 20.4.NĐ.3.33",
       "origin_document_numbers": [
@@ -1186,6 +3273,7 @@
       "reason": "fully_repealed_or_replaced:28/2015/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "9fbd5fab7b4fa92f",
       "article_id": "Điều 20.4.NĐ.3.34",
       "origin_document_numbers": [
@@ -1195,6 +3283,7 @@
       "reason": "fully_repealed_or_replaced:28/2015/NĐ-CP,61/2020/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "5771525b1572bb1e",
       "article_id": "Điều 20.4.NĐ.3.35",
       "origin_document_numbers": [
@@ -1203,6 +3292,7 @@
       "reason": "fully_repealed_or_replaced:28/2015/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "748f2c70d364a91e",
       "article_id": "Điều 20.4.NĐ.3.36",
       "origin_document_numbers": [
@@ -1212,6 +3302,7 @@
       "reason": "fully_repealed_or_replaced:28/2015/NĐ-CP,61/2020/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "1d4954dad9888df3",
       "article_id": "Điều 20.4.NĐ.3.37",
       "origin_document_numbers": [
@@ -1220,6 +3311,7 @@
       "reason": "fully_repealed_or_replaced:28/2015/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "1a60b415ae2146bc",
       "article_id": "Điều 20.4.NĐ.3.38",
       "origin_document_numbers": [
@@ -1229,6 +3321,7 @@
       "reason": "fully_repealed_or_replaced:28/2015/NĐ-CP,61/2020/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "afd1498f5435862f",
       "article_id": "Điều 20.4.NĐ.3.39",
       "origin_document_numbers": [
@@ -1237,6 +3330,7 @@
       "reason": "fully_repealed_or_replaced:28/2015/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "0fef28ad3fee3817",
       "article_id": "Điều 20.4.NĐ.3.4",
       "origin_document_numbers": [
@@ -1245,6 +3339,7 @@
       "reason": "fully_repealed_or_replaced:28/2015/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "8616681fd3752abe",
       "article_id": "Điều 20.4.NĐ.3.40",
       "origin_document_numbers": [
@@ -1253,6 +3348,7 @@
       "reason": "fully_repealed_or_replaced:28/2015/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "731f4b7950cf204c",
       "article_id": "Điều 20.4.NĐ.3.41",
       "origin_document_numbers": [
@@ -1261,6 +3357,7 @@
       "reason": "fully_repealed_or_replaced:28/2015/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "d72cb7f15e226d1a",
       "article_id": "Điều 20.4.NĐ.3.42",
       "origin_document_numbers": [
@@ -1269,6 +3366,7 @@
       "reason": "fully_repealed_or_replaced:28/2015/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "9c8c21819fd2c36c",
       "article_id": "Điều 20.4.NĐ.3.43",
       "origin_document_numbers": [
@@ -1278,6 +3376,7 @@
       "reason": "fully_repealed_or_replaced:28/2015/NĐ-CP,61/2020/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "513fe01ba5d66e8f",
       "article_id": "Điều 20.4.NĐ.3.44",
       "origin_document_numbers": [
@@ -1286,6 +3385,7 @@
       "reason": "fully_repealed_or_replaced:61/2020/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "0fd07147cf622e7a",
       "article_id": "Điều 20.4.NĐ.3.5",
       "origin_document_numbers": [
@@ -1294,6 +3394,7 @@
       "reason": "fully_repealed_or_replaced:28/2015/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "e67e9a354a4b2944",
       "article_id": "Điều 20.4.NĐ.3.6",
       "origin_document_numbers": [
@@ -1302,6 +3403,7 @@
       "reason": "fully_repealed_or_replaced:28/2015/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "860fa2e3999a1d81",
       "article_id": "Điều 20.4.NĐ.3.7",
       "origin_document_numbers": [
@@ -1310,6 +3412,7 @@
       "reason": "fully_repealed_or_replaced:28/2015/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "ca1564eee9d177e7",
       "article_id": "Điều 20.4.NĐ.3.8",
       "origin_document_numbers": [
@@ -1319,6 +3422,7 @@
       "reason": "fully_repealed_or_replaced:28/2015/NĐ-CP,61/2020/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "880e154b1d378d41",
       "article_id": "Điều 20.4.NĐ.5.1",
       "origin_document_numbers": [
@@ -1327,6 +3431,7 @@
       "reason": "fully_repealed_or_replaced:61/2015/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "fc51e60a40fd9808",
       "article_id": "Điều 20.4.NĐ.5.10",
       "origin_document_numbers": [
@@ -1335,6 +3440,7 @@
       "reason": "fully_repealed_or_replaced:61/2015/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "fec3e98656940a49",
       "article_id": "Điều 20.4.NĐ.5.11",
       "origin_document_numbers": [
@@ -1343,6 +3449,7 @@
       "reason": "fully_repealed_or_replaced:61/2015/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "32ff08cbac4afec8",
       "article_id": "Điều 20.4.NĐ.5.12",
       "origin_document_numbers": [
@@ -1351,6 +3458,7 @@
       "reason": "fully_repealed_or_replaced:61/2015/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "7526c1a332160809",
       "article_id": "Điều 20.4.NĐ.5.13",
       "origin_document_numbers": [
@@ -1359,6 +3467,7 @@
       "reason": "fully_repealed_or_replaced:61/2015/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "96b50bcaaa44c79d",
       "article_id": "Điều 20.4.NĐ.5.14",
       "origin_document_numbers": [
@@ -1367,6 +3476,7 @@
       "reason": "fully_repealed_or_replaced:61/2015/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "97c959cca9a6f6db",
       "article_id": "Điều 20.4.NĐ.5.15",
       "origin_document_numbers": [
@@ -1375,6 +3485,7 @@
       "reason": "fully_repealed_or_replaced:61/2015/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "a3f472728356f242",
       "article_id": "Điều 20.4.NĐ.5.16",
       "origin_document_numbers": [
@@ -1383,6 +3494,7 @@
       "reason": "fully_repealed_or_replaced:61/2015/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "e7fba27d4399f9fe",
       "article_id": "Điều 20.4.NĐ.5.17",
       "origin_document_numbers": [
@@ -1391,6 +3503,7 @@
       "reason": "fully_repealed_or_replaced:61/2015/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "7fce6910f4acddd6",
       "article_id": "Điều 20.4.NĐ.5.18",
       "origin_document_numbers": [
@@ -1399,6 +3512,7 @@
       "reason": "fully_repealed_or_replaced:61/2015/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "bebc13140d1b9482",
       "article_id": "Điều 20.4.NĐ.5.19",
       "origin_document_numbers": [
@@ -1407,6 +3521,7 @@
       "reason": "fully_repealed_or_replaced:61/2015/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "0b0db41e38c81624",
       "article_id": "Điều 20.4.NĐ.5.2",
       "origin_document_numbers": [
@@ -1415,6 +3530,7 @@
       "reason": "fully_repealed_or_replaced:61/2015/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "b598f5a108241fb2",
       "article_id": "Điều 20.4.NĐ.5.20",
       "origin_document_numbers": [
@@ -1423,6 +3539,7 @@
       "reason": "fully_repealed_or_replaced:61/2015/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "4b6a20b50bd1fc58",
       "article_id": "Điều 20.4.NĐ.5.21",
       "origin_document_numbers": [
@@ -1432,6 +3549,7 @@
       "reason": "fully_repealed_or_replaced:61/2015/NĐ-CP,74/2019/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "9d91ff12e4e64b6a",
       "article_id": "Điều 20.4.NĐ.5.22",
       "origin_document_numbers": [
@@ -1440,6 +3558,7 @@
       "reason": "fully_repealed_or_replaced:61/2015/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "25750f1997e59738",
       "article_id": "Điều 20.4.NĐ.5.23",
       "origin_document_numbers": [
@@ -1448,6 +3567,7 @@
       "reason": "fully_repealed_or_replaced:61/2015/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "86e248a043601e97",
       "article_id": "Điều 20.4.NĐ.5.24",
       "origin_document_numbers": [
@@ -1457,6 +3577,7 @@
       "reason": "fully_repealed_or_replaced:61/2015/NĐ-CP,74/2019/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "c4e6befde414410e",
       "article_id": "Điều 20.4.NĐ.5.25",
       "origin_document_numbers": [
@@ -1466,6 +3587,7 @@
       "reason": "fully_repealed_or_replaced:61/2015/NĐ-CP,74/2019/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "39f1009ebbc83983",
       "article_id": "Điều 20.4.NĐ.5.26",
       "origin_document_numbers": [
@@ -1475,6 +3597,7 @@
       "reason": "fully_repealed_or_replaced:61/2015/NĐ-CP,74/2019/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "66d1281a105fe821",
       "article_id": "Điều 20.4.NĐ.5.27",
       "origin_document_numbers": [
@@ -1484,6 +3607,7 @@
       "reason": "fully_repealed_or_replaced:61/2015/NĐ-CP,74/2019/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "7404941f48def948",
       "article_id": "Điều 20.4.NĐ.5.28",
       "origin_document_numbers": [
@@ -1493,6 +3617,7 @@
       "reason": "fully_repealed_or_replaced:61/2015/NĐ-CP,74/2019/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "53ce6003508fe415",
       "article_id": "Điều 20.4.NĐ.5.29",
       "origin_document_numbers": [
@@ -1501,6 +3626,7 @@
       "reason": "fully_repealed_or_replaced:61/2015/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "9aa54dcc42a44749",
       "article_id": "Điều 20.4.NĐ.5.3",
       "origin_document_numbers": [
@@ -1509,6 +3635,7 @@
       "reason": "fully_repealed_or_replaced:61/2015/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "75049b5ff55de0a7",
       "article_id": "Điều 20.4.NĐ.5.30",
       "origin_document_numbers": [
@@ -1518,6 +3645,7 @@
       "reason": "fully_repealed_or_replaced:61/2015/NĐ-CP,74/2019/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "c7bba73c14354ea8",
       "article_id": "Điều 20.4.NĐ.5.31",
       "origin_document_numbers": [
@@ -1527,6 +3655,7 @@
       "reason": "fully_repealed_or_replaced:61/2015/NĐ-CP,74/2019/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "53c7ff9451c80515",
       "article_id": "Điều 20.4.NĐ.5.32",
       "origin_document_numbers": [
@@ -1535,6 +3664,7 @@
       "reason": "fully_repealed_or_replaced:61/2015/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "d456cc4c20656761",
       "article_id": "Điều 20.4.NĐ.5.33",
       "origin_document_numbers": [
@@ -1544,6 +3674,7 @@
       "reason": "fully_repealed_or_replaced:61/2015/NĐ-CP,74/2019/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "d8d9d24a4dc51407",
       "article_id": "Điều 20.4.NĐ.5.34",
       "origin_document_numbers": [
@@ -1553,6 +3684,7 @@
       "reason": "fully_repealed_or_replaced:61/2015/NĐ-CP,74/2019/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "413f4b0b1547d330",
       "article_id": "Điều 20.4.NĐ.5.35",
       "origin_document_numbers": [
@@ -1562,6 +3694,7 @@
       "reason": "fully_repealed_or_replaced:61/2015/NĐ-CP,74/2019/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "177fdcf557828f7e",
       "article_id": "Điều 20.4.NĐ.5.36",
       "origin_document_numbers": [
@@ -1571,6 +3704,7 @@
       "reason": "fully_repealed_or_replaced:61/2015/NĐ-CP,74/2019/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "e7d0b91e52049f55",
       "article_id": "Điều 20.4.NĐ.5.37",
       "origin_document_numbers": [
@@ -1580,6 +3714,7 @@
       "reason": "fully_repealed_or_replaced:61/2015/NĐ-CP,74/2019/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "2a8763b099e6f61b",
       "article_id": "Điều 20.4.NĐ.5.38",
       "origin_document_numbers": [
@@ -1589,6 +3724,7 @@
       "reason": "fully_repealed_or_replaced:61/2015/NĐ-CP,74/2019/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "3f76048222645346",
       "article_id": "Điều 20.4.NĐ.5.39",
       "origin_document_numbers": [
@@ -1598,6 +3734,7 @@
       "reason": "fully_repealed_or_replaced:61/2015/NĐ-CP,74/2019/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "653238a791a46f3a",
       "article_id": "Điều 20.4.NĐ.5.4",
       "origin_document_numbers": [
@@ -1606,6 +3743,7 @@
       "reason": "fully_repealed_or_replaced:61/2015/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "b0605a14048d790c",
       "article_id": "Điều 20.4.NĐ.5.40",
       "origin_document_numbers": [
@@ -1615,6 +3753,7 @@
       "reason": "fully_repealed_or_replaced:61/2015/NĐ-CP,74/2019/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "ed8ebcf6249c6443",
       "article_id": "Điều 20.4.NĐ.5.41",
       "origin_document_numbers": [
@@ -1624,6 +3763,7 @@
       "reason": "fully_repealed_or_replaced:61/2015/NĐ-CP,74/2019/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "0d6444e414c2abfb",
       "article_id": "Điều 20.4.NĐ.5.42",
       "origin_document_numbers": [
@@ -1633,6 +3773,7 @@
       "reason": "fully_repealed_or_replaced:61/2015/NĐ-CP,74/2019/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "508f3f409de1e759",
       "article_id": "Điều 20.4.NĐ.5.43",
       "origin_document_numbers": [
@@ -1642,6 +3783,7 @@
       "reason": "fully_repealed_or_replaced:61/2015/NĐ-CP,74/2019/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "c244acc4707b277a",
       "article_id": "Điều 20.4.NĐ.5.44",
       "origin_document_numbers": [
@@ -1651,6 +3793,7 @@
       "reason": "fully_repealed_or_replaced:61/2015/NĐ-CP,74/2019/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "aab26075e3e3a938",
       "article_id": "Điều 20.4.NĐ.5.45",
       "origin_document_numbers": [
@@ -1660,6 +3803,7 @@
       "reason": "fully_repealed_or_replaced:61/2015/NĐ-CP,74/2019/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "9c1a8cbd6b1eb68c",
       "article_id": "Điều 20.4.NĐ.5.46",
       "origin_document_numbers": [
@@ -1669,6 +3813,7 @@
       "reason": "fully_repealed_or_replaced:61/2015/NĐ-CP,74/2019/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "d1c9aa269c9bc911",
       "article_id": "Điều 20.4.NĐ.5.47",
       "origin_document_numbers": [
@@ -1677,6 +3822,7 @@
       "reason": "fully_repealed_or_replaced:74/2019/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "a86a0418237dd875",
       "article_id": "Điều 20.4.NĐ.5.5",
       "origin_document_numbers": [
@@ -1685,6 +3831,7 @@
       "reason": "fully_repealed_or_replaced:61/2015/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "f5ef870b62b09dc1",
       "article_id": "Điều 20.4.NĐ.5.6",
       "origin_document_numbers": [
@@ -1693,6 +3840,7 @@
       "reason": "fully_repealed_or_replaced:61/2015/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "55acdac599d04fbe",
       "article_id": "Điều 20.4.NĐ.5.7",
       "origin_document_numbers": [
@@ -1701,6 +3849,7 @@
       "reason": "fully_repealed_or_replaced:61/2015/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "5a99bb242d743257",
       "article_id": "Điều 20.4.NĐ.5.8",
       "origin_document_numbers": [
@@ -1709,6 +3858,7 @@
       "reason": "fully_repealed_or_replaced:61/2015/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "151eea02ad98fba2",
       "article_id": "Điều 20.4.NĐ.5.9",
       "origin_document_numbers": [
@@ -1717,6 +3867,7 @@
       "reason": "fully_repealed_or_replaced:61/2015/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "7e918e327360f72e",
       "article_id": "Điều 20.4.NĐ.6.1",
       "origin_document_numbers": [
@@ -1725,6 +3876,7 @@
       "reason": "fully_repealed_or_replaced:23/2021/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "b3f350614fb3cc16",
       "article_id": "Điều 20.4.NĐ.6.10",
       "origin_document_numbers": [
@@ -1733,6 +3885,7 @@
       "reason": "fully_repealed_or_replaced:23/2021/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "33d400769fb49b4c",
       "article_id": "Điều 20.4.NĐ.6.11",
       "origin_document_numbers": [
@@ -1741,6 +3894,7 @@
       "reason": "fully_repealed_or_replaced:23/2021/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "c205c3422f280a4b",
       "article_id": "Điều 20.4.NĐ.6.12",
       "origin_document_numbers": [
@@ -1749,6 +3903,7 @@
       "reason": "fully_repealed_or_replaced:23/2021/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "992daa274f5cd21a",
       "article_id": "Điều 20.4.NĐ.6.13",
       "origin_document_numbers": [
@@ -1757,6 +3912,7 @@
       "reason": "fully_repealed_or_replaced:23/2021/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "dab730ca3e0b2909",
       "article_id": "Điều 20.4.NĐ.6.14",
       "origin_document_numbers": [
@@ -1765,6 +3921,7 @@
       "reason": "fully_repealed_or_replaced:23/2021/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "6d3f40e5cf7a0981",
       "article_id": "Điều 20.4.NĐ.6.15",
       "origin_document_numbers": [
@@ -1773,6 +3930,7 @@
       "reason": "fully_repealed_or_replaced:23/2021/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "b80b93d880376cb0",
       "article_id": "Điều 20.4.NĐ.6.16",
       "origin_document_numbers": [
@@ -1781,6 +3939,7 @@
       "reason": "fully_repealed_or_replaced:23/2021/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "0e4e673a472abad5",
       "article_id": "Điều 20.4.NĐ.6.17",
       "origin_document_numbers": [
@@ -1789,6 +3948,7 @@
       "reason": "fully_repealed_or_replaced:23/2021/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "a91f0ec43bb064e6",
       "article_id": "Điều 20.4.NĐ.6.18",
       "origin_document_numbers": [
@@ -1797,6 +3957,7 @@
       "reason": "fully_repealed_or_replaced:23/2021/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "19228c5f3796ab8e",
       "article_id": "Điều 20.4.NĐ.6.19",
       "origin_document_numbers": [
@@ -1805,6 +3966,7 @@
       "reason": "fully_repealed_or_replaced:23/2021/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "9544b5aa5f93c48e",
       "article_id": "Điều 20.4.NĐ.6.2",
       "origin_document_numbers": [
@@ -1813,6 +3975,7 @@
       "reason": "fully_repealed_or_replaced:23/2021/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "a805f44052313736",
       "article_id": "Điều 20.4.NĐ.6.20",
       "origin_document_numbers": [
@@ -1821,6 +3984,7 @@
       "reason": "fully_repealed_or_replaced:23/2021/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "2377f0eb63c918f5",
       "article_id": "Điều 20.4.NĐ.6.21",
       "origin_document_numbers": [
@@ -1829,6 +3993,7 @@
       "reason": "fully_repealed_or_replaced:23/2021/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "66177f39c592d9f6",
       "article_id": "Điều 20.4.NĐ.6.22",
       "origin_document_numbers": [
@@ -1837,6 +4002,7 @@
       "reason": "fully_repealed_or_replaced:23/2021/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "d36a815556936c29",
       "article_id": "Điều 20.4.NĐ.6.23",
       "origin_document_numbers": [
@@ -1845,6 +4011,7 @@
       "reason": "fully_repealed_or_replaced:23/2021/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "2651b8e25d868b20",
       "article_id": "Điều 20.4.NĐ.6.24",
       "origin_document_numbers": [
@@ -1853,6 +4020,7 @@
       "reason": "fully_repealed_or_replaced:23/2021/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "58c74a3a938ec676",
       "article_id": "Điều 20.4.NĐ.6.25",
       "origin_document_numbers": [
@@ -1861,6 +4029,7 @@
       "reason": "fully_repealed_or_replaced:23/2021/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "6b3bedc625efe858",
       "article_id": "Điều 20.4.NĐ.6.26",
       "origin_document_numbers": [
@@ -1869,6 +4038,7 @@
       "reason": "fully_repealed_or_replaced:23/2021/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "6fc5138e40857f11",
       "article_id": "Điều 20.4.NĐ.6.27",
       "origin_document_numbers": [
@@ -1877,6 +4047,7 @@
       "reason": "fully_repealed_or_replaced:23/2021/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "dc8c2ce75ad91731",
       "article_id": "Điều 20.4.NĐ.6.28",
       "origin_document_numbers": [
@@ -1885,6 +4056,7 @@
       "reason": "fully_repealed_or_replaced:23/2021/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "4da9a9df2bc9e05d",
       "article_id": "Điều 20.4.NĐ.6.29",
       "origin_document_numbers": [
@@ -1893,6 +4065,7 @@
       "reason": "fully_repealed_or_replaced:23/2021/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "02171c9aed656fe7",
       "article_id": "Điều 20.4.NĐ.6.3",
       "origin_document_numbers": [
@@ -1901,6 +4074,7 @@
       "reason": "fully_repealed_or_replaced:23/2021/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "9e9cbb8efa6a1b5e",
       "article_id": "Điều 20.4.NĐ.6.30",
       "origin_document_numbers": [
@@ -1909,6 +4083,7 @@
       "reason": "fully_repealed_or_replaced:23/2021/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "9ea62928509d81e5",
       "article_id": "Điều 20.4.NĐ.6.31",
       "origin_document_numbers": [
@@ -1917,6 +4092,7 @@
       "reason": "fully_repealed_or_replaced:23/2021/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "e0281da39ebb848a",
       "article_id": "Điều 20.4.NĐ.6.32",
       "origin_document_numbers": [
@@ -1925,6 +4101,7 @@
       "reason": "fully_repealed_or_replaced:23/2021/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "145022c1ed12530f",
       "article_id": "Điều 20.4.NĐ.6.33",
       "origin_document_numbers": [
@@ -1933,6 +4110,7 @@
       "reason": "fully_repealed_or_replaced:23/2021/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "3dbf43942b37d0ae",
       "article_id": "Điều 20.4.NĐ.6.34",
       "origin_document_numbers": [
@@ -1941,6 +4119,7 @@
       "reason": "fully_repealed_or_replaced:23/2021/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "9b1dd784d90c5b79",
       "article_id": "Điều 20.4.NĐ.6.35",
       "origin_document_numbers": [
@@ -1949,6 +4128,7 @@
       "reason": "fully_repealed_or_replaced:23/2021/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "40aa10a2ef62f612",
       "article_id": "Điều 20.4.NĐ.6.36",
       "origin_document_numbers": [
@@ -1957,6 +4137,7 @@
       "reason": "fully_repealed_or_replaced:23/2021/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "fdcc67f378870549",
       "article_id": "Điều 20.4.NĐ.6.37",
       "origin_document_numbers": [
@@ -1965,6 +4146,7 @@
       "reason": "fully_repealed_or_replaced:23/2021/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "6287dddd4331e6cd",
       "article_id": "Điều 20.4.NĐ.6.38",
       "origin_document_numbers": [
@@ -1973,6 +4155,7 @@
       "reason": "fully_repealed_or_replaced:23/2021/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "9108712e11e5de65",
       "article_id": "Điều 20.4.NĐ.6.4",
       "origin_document_numbers": [
@@ -1981,6 +4164,7 @@
       "reason": "fully_repealed_or_replaced:23/2021/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "b90509e109213197",
       "article_id": "Điều 20.4.NĐ.6.5",
       "origin_document_numbers": [
@@ -1989,6 +4173,7 @@
       "reason": "fully_repealed_or_replaced:23/2021/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "7aba4d0ed3ba1d4a",
       "article_id": "Điều 20.4.NĐ.6.6",
       "origin_document_numbers": [
@@ -1997,6 +4182,7 @@
       "reason": "fully_repealed_or_replaced:23/2021/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "fab45a5a1469824e",
       "article_id": "Điều 20.4.NĐ.6.7",
       "origin_document_numbers": [
@@ -2005,6 +4191,7 @@
       "reason": "fully_repealed_or_replaced:23/2021/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "70ea18add648ff1c",
       "article_id": "Điều 20.4.NĐ.6.8",
       "origin_document_numbers": [
@@ -2013,6 +4200,7 @@
       "reason": "fully_repealed_or_replaced:23/2021/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "c772120270c67383",
       "article_id": "Điều 20.4.NĐ.6.9",
       "origin_document_numbers": [
@@ -2021,6 +4209,7 @@
       "reason": "fully_repealed_or_replaced:23/2021/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "dd3064e2a071c4af",
       "article_id": "Điều 20.4.TL.1.1",
       "origin_document_numbers": [
@@ -2030,6 +4219,7 @@
       "reason": "fully_repealed_or_replaced:28/2015/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "50284eb1e650d34d",
       "article_id": "Điều 20.4.TL.2.1",
       "origin_document_numbers": [
@@ -2039,6 +4229,7 @@
       "reason": "fully_repealed_or_replaced:61/2015/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "c5713b1ce12ed698",
       "article_id": "Điều 20.4.TT.10.1",
       "origin_document_numbers": [
@@ -2048,6 +4239,7 @@
       "reason": "fully_repealed_or_replaced:61/2015/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "22a55f290c98fe4a",
       "article_id": "Điều 20.4.TT.11.1",
       "origin_document_numbers": [
@@ -2058,6 +4250,7 @@
       "reason": "fully_repealed_or_replaced:61/2015/NĐ-CP,74/2019/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "3aa9bde5e1343027",
       "article_id": "Điều 20.4.TT.3.1",
       "origin_document_numbers": [
@@ -2067,6 +4260,7 @@
       "reason": "fully_repealed_or_replaced:28/2015/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "0602ea5b831eeaed",
       "article_id": "Điều 20.4.TT.5.1",
       "origin_document_numbers": [
@@ -2076,6 +4270,7 @@
       "reason": "fully_repealed_or_replaced:61/2015/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "fc1daf1530399c5a",
       "article_id": "Điều 20.4.TT.5.2",
       "origin_document_numbers": [
@@ -2086,6 +4281,7 @@
       "reason": "fully_repealed_or_replaced:61/2015/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "c43fd7cce043670c",
       "article_id": "Điều 20.4.TT.6.1",
       "origin_document_numbers": [
@@ -2095,6 +4291,7 @@
       "reason": "fully_repealed_or_replaced:28/2015/NĐ-CP"
     },
     {
+      "source": "phapdien",
       "record_id": "5d0b0196c2a7a5d0",
       "article_id": "Điều 20.4.TT.9.1",
       "origin_document_numbers": [
@@ -2102,10 +4299,1317 @@
         "61/2015/NĐ-CP"
       ],
       "reason": "fully_repealed_or_replaced:61/2015/NĐ-CP"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "29c551987fac2e29",
+      "article_id": "Điều 20.5.TT.31.1",
+      "origin_document_numbers": [
+        "28/2016/TT-BYT"
+      ],
+      "reason": "fully_repealed_or_replaced:28/2016/TT-BYT"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "3a89c4ceaa997639",
+      "article_id": "Điều 20.5.TT.31.2",
+      "origin_document_numbers": [
+        "28/2016/TT-BYT"
+      ],
+      "reason": "fully_repealed_or_replaced:28/2016/TT-BYT"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "9fb177fa4bc95aad",
+      "article_id": "Điều 20.5.TT.31.26",
+      "origin_document_numbers": [
+        "28/2016/TT-BYT"
+      ],
+      "reason": "fully_repealed_or_replaced:28/2016/TT-BYT"
+    },
+    {
+      "source": "phapdien",
+      "record_id": "3b1c095018ef6e83",
+      "article_id": "Điều 20.5.TT.31.27",
+      "origin_document_numbers": [
+        "28/2016/TT-BYT"
+      ],
+      "reason": "fully_repealed_or_replaced:28/2016/TT-BYT"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "c0cfb73ed02a9366",
+      "article_id": "Điều 1",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "bdb546ba889311e7",
+      "article_id": "Điều 2",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "2f98458e2781e7d9",
+      "article_id": "Điều 3",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "3fddeb0b96530e23",
+      "article_id": "Điều 4",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "b4cf8d7f946f2be0",
+      "article_id": "Điều 5",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "823d23dbe05274b8",
+      "article_id": "Điều 6",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "bc1725a42200d9c0",
+      "article_id": "Điều 7",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "943ad8da7facdf08",
+      "article_id": "Điều 8",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "001a442d0bba3079",
+      "article_id": "Điều 9",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "e433853e2232afa5",
+      "article_id": "Điều 10",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "436d3562d2f2a7c9",
+      "article_id": "Điều 11",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "1c1baa3402ff1ab2",
+      "article_id": "Điều 12",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "1eaf473bc3f49551",
+      "article_id": "Điều 13",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "c221775b70d00e84",
+      "article_id": "Điều 14",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "9832d94b7db7d3c9",
+      "article_id": "Điều 15",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "41954e862ad59af3",
+      "article_id": "Điều 16",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "fc7e0de57e5a79e5",
+      "article_id": "Điều 17",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "86f5c26426397edb",
+      "article_id": "Điều 18",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "80adc13f5b7aa7bf",
+      "article_id": "Điều 19",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "2a154320fe067e3b",
+      "article_id": "Điều 20",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "bbbaf0c302acd340",
+      "article_id": "Điều 21",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "05a48a1b74c80ae4",
+      "article_id": "Điều 22",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "e6185499238fe8bd",
+      "article_id": "Điều 23",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "cdf182b89d91f99b",
+      "article_id": "Điều 24",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "36727c029f666df6",
+      "article_id": "Điều 25",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "c747bd3ee053c94d",
+      "article_id": "Điều 26",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "d294d9a22ef6da79",
+      "article_id": "Điều 27",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "fdc6e57aa9d28ab8",
+      "article_id": "Điều 28",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "adbfcb94ab60ecfb",
+      "article_id": "Điều 29",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "6494dfdecd3da6cd",
+      "article_id": "Điều 30",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "ff5f36d1326f0350",
+      "article_id": "Điều 31",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "5b0349e69b0083b3",
+      "article_id": "Điều 32",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "f796b483c039cbee",
+      "article_id": "Điều 33",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "3d2b8c0199be191d",
+      "article_id": "Điều 34",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "474dcea92c01d846",
+      "article_id": "Điều 35",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "5835ab461973ce4b",
+      "article_id": "Điều 36",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "d09e0641eb3004df",
+      "article_id": "Điều 37",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "5a1a99e0e961609d",
+      "article_id": "Điều 38",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "a41f957265148e3d",
+      "article_id": "Điều 39",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "5cae0bf63d2d71c1",
+      "article_id": "Điều 40",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "5b9a34a11ba639a9",
+      "article_id": "Điều 41",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "e8f49ed17107aed5",
+      "article_id": "Điều 42",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "32486ca0e4794c41",
+      "article_id": "Điều 43",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "a2a4a067c521b786",
+      "article_id": "Điều 44",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "f72e8d62024b3f3b",
+      "article_id": "Điều 45",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "f2eb310b18382fc8",
+      "article_id": "Điều 46",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "5e2651bbb05c45b5",
+      "article_id": "Điều 47",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "07e9000ff28a9348",
+      "article_id": "Điều 48",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "2f1c77a8ffe0aad9",
+      "article_id": "Điều 49",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "19286a18c4f85bfd",
+      "article_id": "Điều 50",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "66d78c88e6bcccb5",
+      "article_id": "Điều 51",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "985e5153fd1de1c6",
+      "article_id": "Điều 52",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "ba97cf62966701d0",
+      "article_id": "Điều 53",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "aefb245e0678ac72",
+      "article_id": "Điều 54",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "6b9e42da2f13de63",
+      "article_id": "Điều 55",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "fbdf781f07e046e7",
+      "article_id": "Điều 56",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "9793ba831a85bb4f",
+      "article_id": "Điều 57",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "7a6a7a75b655ef85",
+      "article_id": "Điều 58",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "89d41ce3967dd42c",
+      "article_id": "Điều 59",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "a12871809bebb682",
+      "article_id": "Điều 60",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "dba897d07bf83ad9",
+      "article_id": "Điều 61",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "4da324c864242b4f",
+      "article_id": "Điều 62",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "98fbf2333f881737",
+      "article_id": "Điều 63",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "646afa779f006331",
+      "article_id": "Điều 64",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "ee33d2b0eabdd04c",
+      "article_id": "Điều 65",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "5a0334f25a3c4a9f",
+      "article_id": "Điều 66",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "16cdc01faea2a917",
+      "article_id": "Điều 67",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "c1a768610b7de10a",
+      "article_id": "Điều 68",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "3b392123e10766ac",
+      "article_id": "Điều 69",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "88305cc1686973a9",
+      "article_id": "Điều 70",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "50ab6e1e22f564c0",
+      "article_id": "Điều 71",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "763707a0f348ee71",
+      "article_id": "Điều 72",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "f6e9482891f087f5",
+      "article_id": "Điều 73",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "4250e50ca36cc38f",
+      "article_id": "Điều 74",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "30ef5d7b13b4c912",
+      "article_id": "Điều 75",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "47f5f2fdfd3bf42f",
+      "article_id": "Điều 76",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "d871c394e2e89688",
+      "article_id": "Điều 77",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "929fee6f98a32c74",
+      "article_id": "Điều 78",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "a6863ba5b3322b9d",
+      "article_id": "Điều 79",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "c45cf4c5caf60b16",
+      "article_id": "Điều 80",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "4bdb773a1d068327",
+      "article_id": "Điều 81",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "88546a1653d75767",
+      "article_id": "Điều 82",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "16d955bfbc244bee",
+      "article_id": "Điều 83",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "7db819add2635f13",
+      "article_id": "Điều 84",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "5a62aaec53186768",
+      "article_id": "Điều 85",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "718dfbadb211beac",
+      "article_id": "Điều 86",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "507b298f58e04d1b",
+      "article_id": "Điều 87",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "21896445817202d0",
+      "article_id": "Điều 88",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "fa316b8d8fa97f62",
+      "article_id": "Điều 89",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "22c640a0e17a6fd8",
+      "article_id": "Điều 90",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "b72aaba8a15b5f1f",
+      "article_id": "Điều 91",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "3a32ca18f943e02c",
+      "article_id": "Điều 92",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "3cfbd632ffa09b10",
+      "article_id": "Điều 93",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "9dec6e104b218d1b",
+      "article_id": "Điều 94",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "2bbe89a647b7cd66",
+      "article_id": "Điều 95",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "9f5a7e10ae6d0246",
+      "article_id": "Điều 96",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "c8591bc0da80a087",
+      "article_id": "Điều 97",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "7402540ed2f61ca5",
+      "article_id": "Điều 98",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "5f70d24f4f6b3f81",
+      "article_id": "Điều 99",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "3a729f9ef49b589e",
+      "article_id": "Điều 100",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "fc95c61698534d72",
+      "article_id": "Điều 101",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "b7987baef4dc124e",
+      "article_id": "Điều 102",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "143cb38b2aeb85a5",
+      "article_id": "Điều 103",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "285f3190edae86ea",
+      "article_id": "Điều 104",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "94ce108f17e92ad5",
+      "article_id": "Điều 105",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "8fade9383be3969d",
+      "article_id": "Điều 106",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "1562a452c996e107",
+      "article_id": "Điều 107",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "95caeea451f7d4c5",
+      "article_id": "Điều 108",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "b3bd6aa1f25c19ed",
+      "article_id": "Điều 109",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "3c024159160c56c8",
+      "article_id": "Điều 110",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "20b9e5bb5b610a71",
+      "article_id": "Điều 111",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "339fea732a58fda7",
+      "article_id": "Điều 112",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "996aeae8225190f6",
+      "article_id": "Điều 113",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "f39186ee2c36b1a5",
+      "article_id": "Điều 114",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "d272e523e26f654a",
+      "article_id": "Điều 115",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "a98ad591a39958e3",
+      "article_id": "Điều 116",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "49861484a5ee5a0d",
+      "article_id": "Điều 117",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "6b4d0562528056a8",
+      "article_id": "Điều 118",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "1c1ef80923f696aa",
+      "article_id": "Điều 119",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "32f7618d2511538f",
+      "article_id": "Điều 120",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "73ba8993f9d9ef47",
+      "article_id": "Điều 121",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "8f9d79518f7fa5f3",
+      "article_id": "Điều 122",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "a081bbdafbf994d2",
+      "article_id": "Điều 123",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "f4e9eabdac2b2a77",
+      "article_id": "Điều 124",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "f1abed1b24bd338e",
+      "article_id": "Điều 125",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "898eaddd68963f6a",
+      "article_id": "Điều 126",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "9a9fd9e986f6faaa",
+      "article_id": "Điều 127",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "0153182f823bd565",
+      "article_id": "Điều 128",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "0e70aa2a51fd7948",
+      "article_id": "Điều 129",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "d1d4f1b94afe1bce",
+      "article_id": "Điều 130",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "4cc4a3e21675c126",
+      "article_id": "Điều 131",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "b1a748c8abcaccb9",
+      "article_id": "Điều 132",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "93a7fcf2582b6f70",
+      "article_id": "Điều 133",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "1aa26df2110ff68c",
+      "article_id": "Điều 134",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "1b0a87b1ddad8fe5",
+      "article_id": "Điều 135",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "0927cf1a63f3a91c",
+      "article_id": "Điều 136",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "89be973690711d31",
+      "article_id": "Điều 137",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "169e07b6c5a6db95",
+      "article_id": "Điều 138",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "f75bc8c1fa58f144",
+      "article_id": "Điều 139",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "aeff75ec6d294a1c",
+      "article_id": "Điều 140",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
+    },
+    {
+      "source": "official_gazette",
+      "record_id": "b7fae242cdfe225c",
+      "article_id": "Điều 141",
+      "origin_document_numbers": [
+        "58/VBHN-VPQH"
+      ],
+      "reason": "fully_repealed_or_replaced:58/VBHN-VPQH"
     }
   ],
   "validation": {
     "official_qa_passed": true,
+    "consolidated_2026_qa_passed": true,
+    "priority_sources_qa_passed": true,
     "unique_record_ids": true,
     "all_records_have_source_url": true,
     "ocr_records": 0

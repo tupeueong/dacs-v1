@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import math
 import os
@@ -64,6 +65,7 @@ class RemoteRetriever:
         payload = health.json()
         if payload.get("status") != "ok":
             raise RuntimeError(f"Remote retrieval service is unhealthy: {payload!r}")
+        self.health = payload
         self.index_dir = payload.get("index_dir", self.api_url)
 
     def search(
@@ -280,6 +282,17 @@ def build_report(
     retriever: SafeRetriever,
     args: argparse.Namespace,
 ) -> dict:
+    cases_sha256 = hashlib.sha256(args.cases.read_bytes()).hexdigest()
+    index_manifest = None
+    index_path = Path(str(retriever.index_dir))
+    manifest_path = index_path / "index_manifest.json"
+    if manifest_path.exists():
+        index_manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    elif isinstance(retriever, RemoteRetriever):
+        remote_manifest = retriever.health.get("index_manifest")
+        if isinstance(remote_manifest, dict):
+            index_manifest = remote_manifest
+
     retrievable_rows = [row for row in rows if row["retrievable"]]
     non_retrievable_rows = [row for row in rows if not row["retrievable"]]
     answerable_rows = [row for row in rows if row["answerable"]]
@@ -367,6 +380,12 @@ def build_report(
         "schema_version": "labor_retrieval_eval.v3",
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "index_dir": str(retriever.index_dir),
+        "index_version": (
+            (index_manifest or {}).get("index_version")
+            or (index_manifest or {}).get("version")
+        ),
+        "corpus_sha256": (index_manifest or {}).get("corpus_sha256"),
+        "cases_sha256": cases_sha256,
         "top_k": args.top_k,
         "case_count": len(rows),
         "retrievable_case_count": len(retrievable_rows),

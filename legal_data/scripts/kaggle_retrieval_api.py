@@ -72,6 +72,14 @@ async def health() -> dict:
         "chunk_count": verification.get("chunk_count"),
         "index_dir": str(retriever.index_dir),
         "index_schema_version": retriever.manifest.get("schema_version"),
+        "index_manifest": {
+            "index_version": (
+                retriever.manifest.get("index_version")
+                or retriever.manifest.get("version")
+            ),
+            "corpus_sha256": retriever.manifest.get("corpus_sha256"),
+            "schema_version": retriever.manifest.get("schema_version"),
+        },
     }
 
 

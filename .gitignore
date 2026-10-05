@@ -17,3 +17,10 @@ legal_data/vectorstore_versions/
 *.staging
 tmp/
 
+# Các file test nháp
+scratch_test.py
+test_api.py
+
+# Dữ liệu cào thô (Raw data) không cần đưa lên Git
+legal_data/cleaned/
+legal_data/json/

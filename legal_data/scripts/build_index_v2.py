@@ -125,61 +125,99 @@ def main() -> int:
         verification = verify_index(final_dir, [chunk["chunk_id"] for chunk in chunks])
         print(f"Reuse verified index: {final_dir}")
     else:
-        safely_remove_staging(staging_dir, index_root)
-        staging_dir.mkdir(parents=True)
-        model = SentenceTransformer(args.model)
-        client = chromadb.PersistentClient(path=str(staging_dir / "chroma"))
-        collection = client.create_collection(
-            SETTINGS.collection_name,
-            configuration={"hnsw": {"space": "cosine"}},
-        )
-
-        for offset in range(0, len(chunks), args.batch_size):
-            batch = chunks[offset : offset + args.batch_size]
-            embeddings = model.encode(
-                [chunk["embed_text"] for chunk in batch],
-                normalize_embeddings=True,
-            ).tolist()
-            collection.add(
-                ids=[chunk["chunk_id"] for chunk in batch],
-                embeddings=embeddings,
-                documents=[chunk["text"] for chunk in batch],
-                metadatas=[scalar_metadata(chunk) for chunk in batch],
-            )
-            print(f"embedded={min(offset + len(batch), len(chunks))}/{len(chunks)}", flush=True)
-
         chunk_ids = [chunk["chunk_id"] for chunk in chunks]
-        bm25 = BM25Okapi([vi_legal_tokenize(chunk["embed_text"]) for chunk in chunks])
-        with (staging_dir / "bm25.pkl").open("wb") as handle:
-            pickle.dump(
-                {
-                    "bm25": bm25,
-                    "chunk_ids": chunk_ids,
-                    "chunks_by_id": {chunk["chunk_id"]: chunk for chunk in chunks},
-                    "tokenizer": "vi_legal_words_and_bigrams.v1",
-                },
-                handle,
-            )
+        manifest_path = staging_dir / "index_manifest.json"
+        if manifest_path.exists():
+            manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+            if (
+                manifest.get("corpus_sha256") != corpus_hash
+                or manifest.get("embedding_model") != args.model
+            ):
+                raise RuntimeError("Completed staging manifest does not match corpus/model")
+            verification = verify_index(staging_dir, chunk_ids)
+            print(f"Reuse completed staging index: {staging_dir}", flush=True)
+        else:
+            expected_ids = set(chunk_ids)
+            if staging_dir.exists():
+                client = chromadb.PersistentClient(path=str(staging_dir / "chroma"))
+                try:
+                    collection = client.get_collection(SETTINGS.collection_name)
+                except Exception as exc:
+                    raise RuntimeError(
+                        f"Staging exists but its Chroma collection is unusable: {staging_dir}"
+                    ) from exc
+                stored_ids = set(collection.get(include=[])["ids"])
+                extra_ids = stored_ids - expected_ids
+                if extra_ids:
+                    raise RuntimeError(
+                        f"Refusing to resume staging with {len(extra_ids)} unexpected IDs"
+                    )
+                if collection.configuration["hnsw"]["space"] != "cosine":
+                    raise RuntimeError("Refusing to resume a non-cosine staging collection")
+                print(
+                    f"Resume staging: embedded={len(stored_ids)}/{len(chunks)}",
+                    flush=True,
+                )
+            else:
+                staging_dir.mkdir(parents=True)
+                client = chromadb.PersistentClient(path=str(staging_dir / "chroma"))
+                collection = client.create_collection(
+                    SETTINGS.collection_name,
+                    configuration={"hnsw": {"space": "cosine"}},
+                )
+                stored_ids = set()
 
-        verification = verify_index(staging_dir, chunk_ids)
-        manifest = {
-            "schema_version": INDEX_SCHEMA_VERSION,
-            "version": version,
-            "created_at": datetime.now(timezone.utc).isoformat(),
-            "corpus_path": str(chunks_path),
-            "corpus_sha256": corpus_hash,
-            "embedding_model": args.model,
-            "normalized_embeddings": True,
-            "bm25_tokenizer": "vi_legal_words_and_bigrams.v1",
-            "verification": verification,
-        }
-        (staging_dir / "index_manifest.json").write_text(
-            json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
-        )
+            pending_chunks = [chunk for chunk in chunks if chunk["chunk_id"] not in stored_ids]
+            if pending_chunks:
+                model = SentenceTransformer(args.model)
+                for offset in range(0, len(pending_chunks), args.batch_size):
+                    batch = pending_chunks[offset : offset + args.batch_size]
+                    embeddings = model.encode(
+                        [chunk["embed_text"] for chunk in batch],
+                        normalize_embeddings=True,
+                    ).tolist()
+                    collection.add(
+                        ids=[chunk["chunk_id"] for chunk in batch],
+                        embeddings=embeddings,
+                        documents=[chunk["text"] for chunk in batch],
+                        metadatas=[scalar_metadata(chunk) for chunk in batch],
+                    )
+                    completed = len(stored_ids) + min(offset + len(batch), len(pending_chunks))
+                    print(f"embedded={completed}/{len(chunks)}", flush=True)
+
+            bm25 = BM25Okapi([vi_legal_tokenize(chunk["embed_text"]) for chunk in chunks])
+            with (staging_dir / "bm25.pkl").open("wb") as handle:
+                pickle.dump(
+                    {
+                        "bm25": bm25,
+                        "chunk_ids": chunk_ids,
+                        "chunks_by_id": {chunk["chunk_id"]: chunk for chunk in chunks},
+                        "tokenizer": "vi_legal_words_and_bigrams.v1",
+                    },
+                    handle,
+                )
+
+            verification = verify_index(staging_dir, chunk_ids)
+            manifest = {
+                "schema_version": INDEX_SCHEMA_VERSION,
+                "version": version,
+                "created_at": datetime.now(timezone.utc).isoformat(),
+                "corpus_path": str(chunks_path),
+                "corpus_sha256": corpus_hash,
+                "embedding_model": args.model,
+                "normalized_embeddings": True,
+                "bm25_tokenizer": "vi_legal_words_and_bigrams.v1",
+                "verification": verification,
+            }
+            manifest_path.write_text(
+                json.dumps(manifest, ensure_ascii=False, indent=2) + "\n",
+                encoding="utf-8",
+            )
 
         # Chroma keeps underlying files open on Windows until the client object is released.
         # Explicitly release references and retry a few times to avoid PermissionError during rename.
-        del collection
+        if "collection" in locals():
+            del collection
         client = None
         gc.collect()
         for attempt in range(10):

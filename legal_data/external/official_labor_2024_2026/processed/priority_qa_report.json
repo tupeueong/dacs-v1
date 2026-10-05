@@ -1,0 +1,42 @@
+{
+  "generated_at": "2026-09-29T08:20:40.447000+00:00",
+  "schema_version": "priority_labor.qa.v1",
+  "record_count": 52,
+  "all_documents_qa_passed": true,
+  "unique_record_ids": true,
+  "documents": [
+    {
+      "document_number": "11/2025/TT-BNV",
+      "official_url": "https://vbpl.vn/bonoivu/Pages/vbpq-toanvan.aspx?ItemID=179767&dvid=320",
+      "mirror_url": "https://lsu.vn/van-ban/thong-tu-11-2025-tt-bnv-bo-noi-vu",
+      "source_revision": "470e93ca5f403e936901fcf63a9e249be6cbeff6187261b281f003dae6630cf9",
+      "article_count": 7,
+      "expected_articles": 7,
+      "continuous_article_numbers": true,
+      "no_empty_articles": true,
+      "passed": true
+    },
+    {
+      "document_number": "12/2025/TT-BNV",
+      "official_url": "https://vbpl.vn/bonoivu/Pages/vbpq-toanvan.aspx?ItemID=179089&dvid=320",
+      "mirror_url": "https://lsu.vn/van-ban/thong-tu-12-2025-tt-bnv-bo-noi-vu",
+      "source_revision": "4269f4aac5a37940a26104d60c9c4f16b373f0c3ff25983d9ab01b261d96d95d",
+      "article_count": 21,
+      "expected_articles": 21,
+      "continuous_article_numbers": true,
+      "no_empty_articles": true,
+      "passed": true
+    },
+    {
+      "document_number": "56/2025/TT-BYT",
+      "official_url": "https://vbpl.vn/boyte/Pages/vbpq-thuoctinh.aspx?ItemID=185610",
+      "mirror_url": "https://lsu.vn/van-ban/thong-tu-56-2025-tt-byt-bo-y-te",
+      "source_revision": "f26be02f09274ce15f00a496435733fbddee6b5bbf2095597ab1591c8671f8de",
+      "article_count": 24,
+      "expected_articles": 24,
+      "continuous_article_numbers": true,
+      "no_empty_articles": true,
+      "passed": true
+    }
+  ]
+}

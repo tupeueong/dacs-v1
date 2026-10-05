@@ -43,6 +43,7 @@ MAX_QUERY_CHARS = 2_000
 CONTEXT_NEIGHBOR_RADIUS = 1
 FILTER_SCALAR_TYPES = (str, int, float, bool)
 MAX_SUBQUERIES = 3
+MAX_INTENT_RERANK_CANDIDATES = 4
 MAX_CHUNKS_PER_ARTICLE = 1
 MAX_CHUNKS_PER_DOCUMENT = 3
 
@@ -172,6 +173,17 @@ def fuzzy_legal_tokenize(text: str) -> list[str]:
     return words + bigrams + trigrams
 
 
+def discover_current_statuses(chunks: Any) -> set[str]:
+    """Accept stable current states plus dated verification states stored in the index."""
+    statuses = set(CURRENT_STATUSES)
+    statuses.update(
+        str(chunk.get("status", ""))
+        for chunk in chunks
+        if str(chunk.get("status", "")).startswith("current_verified_")
+    )
+    return statuses
+
+
 def classify_query(query: str) -> dict[str, bool]:
     folded = normalized_gate_text(query)
     words = folded.split()
@@ -194,19 +206,92 @@ def classify_query(query: str) -> dict[str, bool]:
 
 def decompose_query(query: str) -> list[str]:
     pieces = re.split(
-        r"\s*(?:,\s*)?(?:đồng thời|và)\s+"
+        r"\s*(?:,\s*)?(?:đồng thời|và|hoặc|cũng như)\s+"
         r"(?=(?:doanh nghiệp|thủ tục|cách|điều kiện|xác định|chủ nhà|"
-        r"làm công việc|mức trợ cấp|số tiền|số ngày))",
+        r"làm công việc|mức trợ cấp|số tiền|số ngày|[a-zà-ỹ0-9]{3,}\s+[a-zà-ỹ0-9]{3,}))",
         query,
         flags=re.IGNORECASE,
     )
     result = [query]
     result.extend(piece.strip(" ,;") for piece in pieces if piece.strip(" ,;") != query)
+    folded = normalized_gate_text(query)
+    intent_expansions: list[str] = []
+    if "ho so dang ky lao dong" in folded and "dieu chinh" in folded:
+        intent_expansions.extend(
+            ["hồ sơ đăng ký lao động", "điều chỉnh thông tin đăng ký lao động"]
+        )
+    if "tra luong" in folded and any(token in folded for token in ("tre", "cham")):
+        intent_expansions.extend(
+            ["nguyên tắc trả lương đầy đủ đúng hạn", "kỳ hạn trả lương chậm trả lương"]
+        )
+    if "mang thai" in folded and any(token in folded for token in ("nghi viec", "cho nghi")):
+        intent_expansions.extend(
+            [
+                "quyền đơn phương chấm dứt hợp đồng lao động với người lao động mang thai",
+                "bảo vệ thai sản người lao động mang thai",
+            ]
+        )
+    if "cham dong" in folded and "tron dong" in folded:
+        intent_expansions.extend(
+            ["chậm đóng bảo hiểm xã hội", "trốn đóng bảo hiểm xã hội"]
+        )
+    if "lam them" in folded and "ban dem" in folded:
+        intent_expansions.extend(
+            ["điều kiện làm thêm giờ", "tiền lương làm thêm giờ vào ban đêm"]
+        )
+    if "tuoi nghi huu" in folded and "nang nhoc" in folded:
+        intent_expansions.extend(
+            [
+                "sử dụng người lao động cao tuổi",
+                "người lao động cao tuổi làm nghề công việc nặng nhọc",
+            ]
+        )
+    if "gioi han lam them" in folded and any(token in folded for token in ("phat", "vi pham")):
+        intent_expansions.extend(
+            ["giới hạn làm thêm giờ", "xử phạt vi phạm thời giờ làm việc"]
+        )
+    result.extend(intent_expansions)
     unique = []
     for item in result:
         if len(item.split()) >= 3 and item.casefold() not in {value.casefold() for value in unique}:
             unique.append(item)
     return unique[:MAX_SUBQUERIES]
+
+
+def legal_article_hints(query: str) -> list[tuple[str, str]]:
+    """High-precision concept routes; hints enter candidates but never bypass status filters."""
+    folded = normalized_gate_text(query)
+    hints: list[tuple[str, str]] = []
+
+    def add(document: str, *articles: str) -> None:
+        hints.extend((document, article) for article in articles)
+
+    if "ho so dang ky lao dong" in folded and "dieu chinh" in folded:
+        add("318/2025/NĐ-CP", "Điều 5", "Điều 7")
+    if "tra luong" in folded and any(token in folded for token in ("tre", "cham")):
+        add("18/VBHN-VPQH", "Điều 94", "Điều 97")
+    if "mang thai" in folded and any(token in folded for token in ("nghi viec", "cho nghi")):
+        add("18/VBHN-VPQH", "Điều 37", "Điều 137")
+    if "cham dong" in folded and "tron dong" in folded:
+        add("19/VBHN-VPQH", "Điều 38", "Điều 39")
+        if "so tien" in folded or "so ngay" in folded:
+            add("274/2025/NĐ-CP", "Điều 5", "Điều 6")
+    if "lam them" in folded and "ban dem" in folded:
+        add("18/VBHN-VPQH", "Điều 98", "Điều 107")
+    if "tuoi nghi huu" in folded and "nang nhoc" in folded:
+        add("18/VBHN-VPQH", "Điều 148", "Điều 149")
+    if "gioi han lam them" in folded and any(token in folded for token in ("phat", "vi pham")):
+        add("18/VBHN-VPQH", "Điều 107")
+        add("12/2022/NĐ-CP", "Điều 18")
+    if (
+        "con thieu" in folded
+        and "thang" in folded
+        and "luong huu" in folded
+        and any(token in folded for token in ("bao hiem xa hoi tu nguyen", "dong mot lan", "dong bu"))
+    ):
+        add("11/2025/TT-BNV", "Điều 3")
+
+    return list(dict.fromkeys(hints))
 
 
 def resolve_current_index(pointer_path: Path = SETTINGS.current_pointer) -> Path:
@@ -249,12 +334,23 @@ class SafeRetriever:
         self.chunk_ids = data["chunk_ids"]
         self.by_id = data["chunks_by_id"]
         self._validate_loaded_index()
-        self.fuzzy_bm25 = BM25Okapi(
-            [
-                fuzzy_legal_tokenize(chunk.get("embed_text", chunk.get("text", "")))
-                for chunk in self.by_id.values()
-            ]
-        )
+        self.current_statuses = discover_current_statuses(self.by_id.values())
+        fuzzy_bm25_path = self.index_dir / "fuzzy_bm25.pkl"
+        if fuzzy_bm25_path.exists():
+            with fuzzy_bm25_path.open("rb") as handle:
+                self.fuzzy_bm25 = pickle.load(handle)
+        else:
+            self.fuzzy_bm25 = BM25Okapi(
+                [
+                    fuzzy_legal_tokenize(chunk.get("embed_text", chunk.get("text", "")))
+                    for chunk in self.by_id.values()
+                ]
+            )
+            try:
+                with fuzzy_bm25_path.open("wb") as handle:
+                    pickle.dump(self.fuzzy_bm25, handle, protocol=pickle.HIGHEST_PROTOCOL)
+            except OSError:
+                pass
         self.fuzzy_chunk_ids = list(self.by_id)
 
         # Load expensive models only after the local index has passed validation.
@@ -374,9 +470,16 @@ class SafeRetriever:
         return sorted(scores, key=scores.get, reverse=True)
 
     def _vector_search(self, query: str, filters: dict | None) -> tuple[list[str], dict[str, float]]:
-        embedding = self.embed_model.encode([query], normalize_embeddings=True).tolist()
+        return self._vector_search_many([query], filters)[0]
+
+    def _vector_search_many(
+        self, queries: list[str], filters: dict | None
+    ) -> list[tuple[list[str], dict[str, float]]]:
+        embeddings = self.embed_model.encode(
+            queries, normalize_embeddings=True
+        ).tolist()
         arguments: dict[str, Any] = {
-            "query_embeddings": embedding,
+            "query_embeddings": embeddings,
             "n_results": min(self.k_candidates, self.collection.count()),
             "include": ["distances"],
         }
@@ -384,12 +487,15 @@ class SafeRetriever:
         if where is not None:
             arguments["where"] = where
         result = self.collection.query(**arguments)
-        ids = list(result["ids"][0])
-        distances = {
-            chunk_id: float(distance)
-            for chunk_id, distance in zip(ids, result["distances"][0])
-        }
-        return ids, distances
+        output = []
+        for ids_raw, distances_raw in zip(result["ids"], result["distances"]):
+            ids = list(ids_raw)
+            distances = {
+                chunk_id: float(distance)
+                for chunk_id, distance in zip(ids, distances_raw)
+            }
+            output.append((ids, distances))
+        return output
 
     def _bm25_search(self, query: str, filters: dict | None) -> tuple[list[str], dict[str, float]]:
         raw_scores = self.bm25.get_scores(vi_legal_tokenize(query))
@@ -426,20 +532,55 @@ class SafeRetriever:
         return ids, scores
 
     @staticmethod
-    def _diversify_hits(ranked_hits: list[dict], top_k: int) -> list[dict]:
+    def _diversify_hits(
+        ranked_hits: list[dict],
+        top_k: int,
+        subqueries: list[str] | None = None,
+    ) -> list[dict]:
         selected = []
+        selected_ids: set[str] = set()
         article_counts: dict[tuple[str, str], int] = defaultdict(int)
         document_counts: dict[str, int] = defaultdict(int)
-        for hit in ranked_hits:
+
+        def add(hit: dict) -> bool:
+            chunk_id = str(hit.get("chunk_id", ""))
+            if chunk_id in selected_ids:
+                return False
             document = str(hit.get("doc_number", ""))
             article = (document, str(hit.get("article_number", "")))
             if article_counts[article] >= MAX_CHUNKS_PER_ARTICLE:
-                continue
+                return False
             if document_counts[document] >= MAX_CHUNKS_PER_DOCUMENT:
-                continue
+                return False
             selected.append(hit)
+            selected_ids.add(chunk_id)
             article_counts[article] += 1
             document_counts[document] += 1
+            return True
+
+        # Reserve coverage for independent intents before filling by the global score.
+        for hit in ranked_hits:
+            if hit.get("legal_article_hint"):
+                add(hit)
+            if len(selected) >= top_k:
+                return selected
+
+        for subquery in (subqueries or [])[1:]:
+            candidates = sorted(
+                ranked_hits,
+                key=lambda hit: float(hit.get("subquery_scores", {}).get(subquery, -1.0)),
+                reverse=True,
+            )
+            for hit in candidates:
+                if subquery not in hit.get("subquery_scores", {}):
+                    continue
+                if add(hit):
+                    break
+            if len(selected) >= top_k:
+                return selected
+
+        for hit in ranked_hits:
+            add(hit)
             if len(selected) >= top_k:
                 break
         return selected
@@ -488,17 +629,19 @@ class SafeRetriever:
 
         effective_filters = self._validate_filters(filters)
         if current_only and "status" not in effective_filters:
-            effective_filters["status"] = sorted(CURRENT_STATUSES)
+            effective_filters["status"] = sorted(self.current_statuses)
 
         retrieval_input = sanitize_adversarial_query(query) if classification["adversarial"] else query
         normalized_query = corrected_query(retrieval_input)
         subqueries = decompose_query(normalized_query)
+        hinted_articles = legal_article_hints(normalized_query)
         ranked_lists = []
         distances: dict[str, float] = {}
         bm25_scores: dict[str, float] = {}
         fuzzy_scores: dict[str, float] = {}
-        for subquery in subqueries:
-            vector_ids, sub_distances = self._vector_search(subquery, effective_filters)
+        candidate_subqueries: dict[str, set[str]] = defaultdict(set)
+        vector_results = self._vector_search_many(subqueries, effective_filters)
+        for subquery, (vector_ids, sub_distances) in zip(subqueries, vector_results):
             bm25_ids, sub_bm25_scores = self._bm25_search(subquery, effective_filters)
             fuzzy_ids, sub_fuzzy_scores = (
                 self._fuzzy_search(subquery, effective_filters)
@@ -508,6 +651,11 @@ class SafeRetriever:
             ranked_lists.extend((vector_ids, bm25_ids))
             if fuzzy_ids:
                 ranked_lists.append(fuzzy_ids)
+            intent_ids = self._rrf(vector_ids, bm25_ids, fuzzy_ids)[
+                :MAX_INTENT_RERANK_CANDIDATES
+            ]
+            for chunk_id in intent_ids:
+                candidate_subqueries[chunk_id].add(subquery)
             for chunk_id, distance in sub_distances.items():
                 distances[chunk_id] = min(distance, distances.get(chunk_id, float("inf")))
             for chunk_id, score in sub_bm25_scores.items():
@@ -516,6 +664,13 @@ class SafeRetriever:
                 fuzzy_scores[chunk_id] = max(score, fuzzy_scores.get(chunk_id, 0.0))
         candidate_limit = min(self.k_candidates * len(subqueries), 30)
         fused = self._rrf(*ranked_lists)[:candidate_limit]
+        hinted_ids = []
+        for document, article in hinted_articles:
+            for chunk in self.by_article.get((document, article), []):
+                if self._matches(chunk, effective_filters):
+                    hinted_ids.append(chunk["chunk_id"])
+        hinted_id_set = set(hinted_ids)
+        fused = list(dict.fromkeys([*hinted_ids, *fused]))[:candidate_limit]
         if not fused:
             return {
                 "accepted": False,
@@ -533,7 +688,11 @@ class SafeRetriever:
                 for chunk in candidates
             ]
         )
-        order = sorted(range(len(candidates)), key=lambda index: float(rerank_scores[index]), reverse=True)
+        order = sorted(
+            range(len(candidates)),
+            key=lambda index: float(rerank_scores[index]),
+            reverse=True,
+        )
         ranked_hits = []
         for index in order:
             chunk = candidates[index]
@@ -542,6 +701,11 @@ class SafeRetriever:
                 {
                     **chunk,
                     "rerank_score": float(rerank_scores[index]),
+                    "subquery_scores": {
+                        subquery: float(rerank_scores[index])
+                        for subquery in candidate_subqueries[chunk_id]
+                    },
+                    "legal_article_hint": chunk_id in hinted_id_set,
                     "vector_distance": distances.get(chunk_id),
                     "bm25_score": bm25_scores.get(chunk_id, 0.0),
                     "fuzzy_score": fuzzy_scores.get(chunk_id, 0.0),
@@ -549,9 +713,13 @@ class SafeRetriever:
             )
         top_score = ranked_hits[0]["rerank_score"] if ranked_hits else float("-inf")
         eligible_hits = [
-            hit for hit in ranked_hits if hit["rerank_score"] >= self.min_rerank_score
+            hit
+            for hit in ranked_hits
+            if hit["rerank_score"] >= self.min_rerank_score
+            or hit.get("legal_article_hint")
+            or (hit.get("vector_distance") is not None and hit["vector_distance"] <= 0.30)
         ]
-        hits = self._diversify_hits(eligible_hits, top_k)
+        hits = self._diversify_hits(eligible_hits, top_k, subqueries)
         if not hits:
             return {
                 "accepted": False,

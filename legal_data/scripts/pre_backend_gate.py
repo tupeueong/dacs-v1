@@ -18,18 +18,23 @@ def load(path: Path) -> dict:
 
 def main() -> int:
     checks = {}
-    article_report = load(SETTINGS.legal_data / "rag_corpus" / "articles_qa_report_v2.json")
+    article_report = load(SETTINGS.legal_data / "rag_corpus" / "articles_qa_report.json")
     chunk_report = load(SETTINGS.legal_data / "rag_corpus" / "chunks_qa_report.json")
-    registry_report = load(
+    priority_report = load(
         SETTINGS.legal_data
         / "external"
         / "official_labor_2024_2026"
-        / "source_registry.current.report.json"
+        / "processed"
+        / "priority_qa_report.json"
     )
-    checks["articles_v2"] = (
-        article_report["validation"]["unique_record_ids"]
-        and article_report["validation"]["unique_legal_keys"]
-        and article_report["validation"]["superseded_sources_remaining"] == 0
+    article_validation = article_report["validation"]
+    checks["articles_canonical"] = (
+        article_validation["official_qa_passed"]
+        and article_validation["consolidated_2026_qa_passed"]
+        and article_validation["priority_sources_qa_passed"]
+        and article_validation["unique_record_ids"]
+        and article_validation["all_records_have_source_url"]
+        and article_validation["ocr_records"] == 0
     )
     checks["chunks_v2"] = (
         chunk_report["schema_version"] == "unified_labor.chunks.v2"
@@ -37,23 +42,55 @@ def main() -> int:
         and chunk_report["validation"]["all_articles_covered"]
         and chunk_report["token_length"]["over_hard_max"] == 0
     )
-    checks["priority_sources_complete"] = registry_report["pending_current_count"] == 0
+    required_priority_documents = {
+        "11/2025/TT-BNV",
+        "12/2025/TT-BNV",
+        "56/2025/TT-BYT",
+    }
+    priority_documents = {
+        item["document_number"]
+        for item in priority_report.get("documents", [])
+        if item.get("passed")
+    }
+    pending_priority_documents = sorted(required_priority_documents - priority_documents)
+    checks["priority_sources_complete"] = (
+        priority_report.get("all_documents_qa_passed", False)
+        and priority_report.get("unique_record_ids", False)
+        and not pending_priority_documents
+    )
 
+    index_error = None
+    manifest = None
     if SETTINGS.current_pointer.exists():
-        index_dir = resolve_index(SETTINGS.current_pointer)
-        chunks = load_chunks(SETTINGS.chunks_path)
-        index_result = verify_index(index_dir, [chunk["chunk_id"] for chunk in chunks])
-        manifest = load(index_dir / "index_manifest.json")
-        checks["index_integrity"] = (
-            index_result["distance_metric"] == "cosine"
-            and manifest["corpus_sha256"] == file_sha256(SETTINGS.chunks_path)
-        )
+        try:
+            index_dir = resolve_index(SETTINGS.current_pointer)
+            chunks = load_chunks(SETTINGS.chunks_path)
+            index_result = verify_index(index_dir, [chunk["chunk_id"] for chunk in chunks])
+            manifest = load(index_dir / "index_manifest.json")
+            checks["index_integrity"] = (
+                index_result["distance_metric"] == "cosine"
+                and manifest["corpus_sha256"] == file_sha256(SETTINGS.chunks_path)
+            )
+        except (FileNotFoundError, KeyError, RuntimeError, ValueError) as exc:
+            index_result = None
+            index_error = f"{type(exc).__name__}: {exc}"
+            checks["index_integrity"] = False
     else:
         index_result = None
+        index_error = "Current index pointer does not exist"
         checks["index_integrity"] = False
 
     eval_path = SETTINGS.legal_data / "eval" / "retrieval_report.json"
-    checks["retrieval_evaluation"] = eval_path.exists() and load(eval_path).get("passed", False)
+    cases_path = SETTINGS.legal_data / "eval" / "retrieval_cases.jsonl"
+    eval_report = load(eval_path) if eval_path.exists() else {}
+    checks["retrieval_evaluation"] = (
+        eval_report.get("passed", False)
+        and manifest is not None
+        and eval_report.get("corpus_sha256") == manifest.get("corpus_sha256")
+        and eval_report.get("index_version")
+        == (manifest.get("index_version") or manifest.get("version"))
+        and eval_report.get("cases_sha256") == file_sha256(cases_path)
+    )
 
     tests = subprocess.run(
         [
@@ -76,8 +113,9 @@ def main() -> int:
     report = {
         "ready_for_backend": all(checks.values()),
         "checks": checks,
-        "pending_current_documents": registry_report["pending_current_documents"],
+        "pending_priority_documents": pending_priority_documents,
         "index": index_result,
+        "index_error": index_error,
         "unit_test_output": (tests.stdout + tests.stderr).strip(),
     }
     output = SETTINGS.legal_data / "pre_backend_gate_report.json"

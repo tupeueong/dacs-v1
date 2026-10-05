@@ -11,24 +11,29 @@ from datetime import date
 from pathlib import Path
 from typing import Any
 
+import requests
 from dotenv import load_dotenv
-from google import genai
-from google.genai import errors as genai_errors
 
 from retrieve_v2 import SafeRetriever
 
+ROOT = Path(__file__).resolve().parents[2]
+load_dotenv(ROOT / ".env")
 
-MODEL_NAME = "gemini-3.5-flash-lite"
+
+DEFAULT_OPENROUTER_MODEL = "google/gemma-4-26b-a4b-it:free"
+DEFAULT_FALLBACK_MODEL = "qwen/qwen3.8-27b:free"
+OPENROUTER_API_URL = "https://openrouter.ai/api/v1/chat/completions"
+MODEL_NAME = DEFAULT_OPENROUTER_MODEL
 MIN_QUOTE_CHARS = 20
 MIN_QUOTE_KEYWORDS = 3
 MIN_CLAIM_KEYWORD_RATIO = 0.35
 DEFAULT_TIMEOUT_SECONDS = 45
 MAX_GENERATION_ATTEMPTS = 3
 RETRYABLE_GENERATION_ERRORS = {
-    "gemini_timeout",
-    "gemini_rate_limited",
-    "gemini_unavailable",
-    "gemini_network_error",
+    "openrouter_timeout",
+    "rate_limited",
+    "service_unavailable",
+    "network_error",
 }
 WORD_RE = re.compile(r"\d+(?:[.,/]\d+)*|[^\W_]+", re.UNICODE)
 NUMBER_RE = re.compile(r"\d+(?:[.,/]\d+)*")
@@ -69,6 +74,15 @@ LEGAL_OPERATORS = {
     "tối đa",
     "tối thiểu",
     "trừ",
+}
+LEGAL_OPERATOR_EQUIVALENTS = {
+    "tối đa": {"tối đa", "không quá", "không vượt quá", "nhiều nhất"},
+    "tối thiểu": {"tối thiểu", "không dưới", "ít nhất"},
+    "phải": {"phải", "bắt buộc", "cần phải", "nghĩa vụ", "bảo đảm", "trách nhiệm"},
+    "cấm": {"cấm", "không được", "không được phép", "nghiêm cấm"},
+    "không": {"không", "chưa", "chẳng"},
+    "chưa": {"chưa", "không"},
+    "trừ": {"trừ", "ngoại trừ", "loại trừ"},
 }
 INACTIVE_STATUSES = {
     "expired",
@@ -259,7 +273,12 @@ def verify_citations(payload: dict, evidence_by_id: dict[str, dict]) -> tuple[bo
     return not errors, errors
 
 
-def _claim_support_errors(claim_text: str, quotes: list[str], path: str) -> list[str]:
+def _claim_support_errors(
+    claim_text: str,
+    quotes: list[str],
+    path: str,
+    chunk_texts: list[str] | None = None,
+) -> list[str]:
     combined_quotes = " ".join(quotes)
     claim_keywords = set(significant_tokens(claim_text))
     quote_keywords = set(significant_tokens(combined_quotes))
@@ -281,10 +300,16 @@ def _claim_support_errors(claim_text: str, quotes: list[str], path: str) -> list
         errors.append(f"{path}.text contains unsupported numbers: {', '.join(missing_numbers)}")
     normalized_claim = normalize_text(claim_text)
     normalized_quotes = normalize_text(combined_quotes)
+    combined_chunk_text = " ".join(chunk_texts or [])
+    normalized_chunk_text = normalize_text(combined_chunk_text)
     missing_operators = sorted(
         operator
         for operator in LEGAL_OPERATORS
-        if operator in normalized_claim and operator not in normalized_quotes
+        if operator in normalized_claim
+        and not any(
+            eq in normalized_quotes or eq in normalized_chunk_text
+            for eq in LEGAL_OPERATOR_EQUIVALENTS.get(operator, {operator})
+        )
     )
     if missing_operators:
         errors.append(
@@ -342,14 +367,30 @@ def validate_generation_payload(
             continue
         seen_claims.add(normalized_claim)
         citations = claim.get("citations")
+        if citations is None and "citation" in claim:
+            raw_cit = claim.get("citation")
+            citations = [raw_cit] if isinstance(raw_cit, dict) else raw_cit
+        elif isinstance(citations, dict):
+            citations = [citations]
+
         citation_errors, verified_quotes = _citation_errors(
             citations, evidence_by_id, path=f"{path}.citations"
         )
         errors.extend(citation_errors)
         if not isinstance(citations, list) or not citations:
             errors.append(f"{path} must contain at least one citation")
+
         if verified_quotes:
-            errors.extend(_claim_support_errors(text, verified_quotes, path))
+            chunk_texts = [
+                evidence_by_id[c["chunk_id"]].get("text", "")
+                for c in (citations if isinstance(citations, list) else [])
+                if isinstance(c, dict) and c.get("chunk_id") in evidence_by_id
+            ]
+            errors.extend(
+                _claim_support_errors(
+                    text, verified_quotes, path, chunk_texts=chunk_texts
+                )
+            )
         safe_claims.append(
             {
                 "role": role,
@@ -379,10 +420,17 @@ def validate_generation_payload(
         }:
             errors.append(f"{path}.strategy is invalid")
         citations = conflict.get("citations")
+        if citations is None and "citation" in conflict:
+            raw_cit = conflict.get("citation")
+            citations = [raw_cit] if isinstance(raw_cit, dict) else raw_cit
+        elif isinstance(citations, dict):
+            citations = [citations]
+
         citation_errors, verified_quotes = _citation_errors(
             citations, evidence_by_id, path=f"{path}.citations"
         )
         errors.extend(citation_errors)
+
         cited_ids = {
             citation.get("chunk_id")
             for citation in citations or []
@@ -813,67 +861,85 @@ def _failure(
     return result
 
 
+def extract_json_payload(text: str) -> dict:
+    """Robustly extract and parse JSON payload even if wrapped in markdown code blocks."""
+    cleaned = text.strip()
+    match = re.search(r"```(?:json)?\s*(\{.*?\})\s*```", cleaned, re.DOTALL)
+    if match:
+        cleaned = match.group(1).strip()
+    else:
+        start = cleaned.find("{")
+        end = cleaned.rfind("}")
+        if start != -1 and end != -1 and end > start:
+            cleaned = cleaned[start : end + 1].strip()
+    return json.loads(cleaned)
+
+
 def _classify_api_error(error: Exception) -> tuple[str, str]:
     code = getattr(error, "code", None) or getattr(error, "status_code", None)
+    if hasattr(error, "response") and getattr(error.response, "status_code", None):
+        code = error.response.status_code
     name = type(error).__name__.casefold()
+
     if isinstance(error, TimeoutError) or "timeout" in name:
-        return "gemini_timeout", "Dịch vụ tạo câu trả lời đã hết thời gian chờ."
-    if isinstance(error, genai_errors.ClientError) and code == 429:
-        return "gemini_rate_limited", "Dịch vụ tạo câu trả lời đang quá tải. Vui lòng thử lại sau."
-    if isinstance(error, genai_errors.ServerError):
-        return "gemini_unavailable", "Dịch vụ tạo câu trả lời hiện không khả dụng."
+        return "openrouter_timeout", "Dịch vụ OpenRouter đã hết thời gian chờ."
+    if code == 401 or "unauthorized" in name:
+        return "api_unauthorized", "OPENROUTER_API_KEY không hợp lệ hoặc đã hết hạn."
+    if code == 429 or "rate" in name:
+        return "rate_limited", "Dịch vụ OpenRouter đang bị giới hạn tốc độ (Rate Limit). Vui lòng thử lại sau."
+    if code is not None and code >= 500:
+        return "service_unavailable", "Dịch vụ mô hình trên OpenRouter hiện đang gián đoạn hoặc quá tải."
     if isinstance(error, (ConnectionError, OSError)) or "connect" in name or "network" in name:
-        return "gemini_network_error", "Không thể kết nối tới dịch vụ tạo câu trả lời."
-    if isinstance(error, genai_errors.ClientError):
-        return "gemini_request_error", "Yêu cầu tạo câu trả lời không hợp lệ hoặc bị từ chối."
-    return "gemini_error", "Không thể tạo câu trả lời tại thời điểm này."
+        return "network_error", "Không thể kết nối tới máy chủ OpenRouter."
+    return "generation_error", f"Không thể tạo câu trả lời tại thời điểm này ({type(error).__name__})."
 
 
 def _looks_refused(response: Any) -> bool:
-    values = []
-    prompt_feedback = getattr(response, "prompt_feedback", None)
-    if prompt_feedback is not None:
-        values.append(str(prompt_feedback))
-    for candidate in getattr(response, "candidates", None) or []:
-        values.append(str(getattr(candidate, "finish_reason", "")))
-    markers = " ".join(values).casefold()
-    return any(marker in markers for marker in ("safety", "blocked", "prohibited", "refusal"))
+    if isinstance(response, str):
+        markers = response.casefold()
+    elif isinstance(response, dict):
+        markers = str(response).casefold()
+    else:
+        markers = str(getattr(response, "text", "")).casefold()
+    return any(marker in markers for marker in ("safety", "blocked", "prohibited", "refusal", "i cannot answer"))
 
 
 class GroundedGenerator:
     def __init__(
         self,
         retriever: SafeRetriever | None = None,
-        model_name: str = MODEL_NAME,
+        model_name: str | None = None,
         timeout_seconds: int = DEFAULT_TIMEOUT_SECONDS,
     ) -> None:
         load_dotenv()
         if not isinstance(timeout_seconds, int) or timeout_seconds <= 0:
             raise ValueError("timeout_seconds must be a positive integer")
-        self.model_name = model_name
         self.timeout_seconds = timeout_seconds
-        self.api_key = os.getenv("GEMINI_API_KEY", "").strip()
         self.retriever = retriever
         self.source_registry = load_source_registry()
-        self.client = None
-        if self.api_key:
-            self.retriever = retriever or SafeRetriever()
-            self.client = genai.Client(
-                api_key=self.api_key,
-                http_options={"timeout": timeout_seconds * 1000},
-            )
+
+        self.api_key = os.getenv("OPENROUTER_API_KEY", "").strip()
+        self.model_name = (
+            model_name
+            if model_name
+            else os.getenv("OPENROUTER_MODEL", DEFAULT_OPENROUTER_MODEL)
+        )
+        self.fallback_model = os.getenv("OPENROUTER_FALLBACK_MODEL", DEFAULT_FALLBACK_MODEL)
+
+        if self.api_key and self.retriever is None:
+            self.retriever = SafeRetriever()
 
     @property
     def available(self) -> bool:
-        return bool(self.api_key and self.client is not None and self.retriever is not None)
+        return bool(self.api_key and self.retriever is not None)
 
     def answer(self, question: str, *, top_k: int = 5) -> dict:
         if not self.available:
             return _failure(
                 "missing_api_key",
-                "Chức năng tạo câu trả lời chưa được cấu hình GEMINI_API_KEY.",
+                "Chức năng tạo câu trả lời chưa được cấu hình OPENROUTER_API_KEY trong file .env.",
             )
-        assert self.retriever is not None and self.client is not None
+        assert self.retriever is not None
         retrieval = self.retriever.search(question, top_k=top_k)
         retrieval_summary = _retrieval_summary(retrieval)
         if not retrieval["accepted"]:
@@ -910,40 +976,81 @@ class GroundedGenerator:
                 )
             )
         context_text = "\n\n---\n\n".join(blocks)
-        prompt = f"""NGUỒN PHÁP LUẬT:\n\n{context_text}
+        prompt = f"""NGUỒN PHÁP LUẬT:
 
-CÂU HỎI CỦA NGƯỜI DÙNG:\n{question}
+{context_text}
 
-Trả JSON theo schema đã cung cấp. Mỗi claim là một khẳng định pháp lý độc lập. Mỗi
-claim phải có citation chứa chunk_id hợp lệ và quote nguyên văn đủ dài để hỗ trợ trực
-tiếp cho claim. Nếu nguồn không đủ, trả answerable=false, claims=[] và giải thích ngắn
-trong answer. Trường answer chỉ tóm tắt các claim, không thêm thông tin khác.
+CÂU HỎI CỦA NGƯỜI DÙNG:
+{question}
+
+Yêu cầu trả về DUY NHẤT một chuỗi JSON hợp lệ theo đúng cấu trúc sau (không kèm văn bản nào ngoài JSON):
+{{
+  "answerable": true,
+  "answer": "Tóm tắt kết luận ngắn gọn trực tiếp trả lời câu hỏi",
+  "claims": [
+    {{
+      "role": "conclusion",
+      "text": "Khẳng định pháp lý trực tiếp",
+      "citations": [
+        {{
+          "chunk_id": "mã_chunk_id_chính_xác",
+          "quote": "trích_dẫn_nguyên_văn_từ_chunk"
+        }}
+      ]
+    }}
+  ],
+  "conflicts": []
+}}
+
+Lưu ý bắt buộc:
+1. Trường "citations" của mỗi claim BẮT BUỘC là danh sách (list) các đối tượng có "chunk_id" và "quote".
+2. Mỗi claim phải có ít nhất 1 trích dẫn ("quote") nguyên văn từ nguồn hỗ trợ trực tiếp.
+3. Các role hợp lệ: "conclusion" (kết luận), "rule" (quy định), "application" (áp dụng), "caveat" (lưu ý).
+4. Nếu nguồn không đủ thông tin, trả về answerable=false, claims=[] và giải thích lý do trong answer.
+5. Nếu không có mâu thuẫn giữa các văn bản, trả về conflicts=[].
 """
-        prompt += """
 
-Yêu cầu chất lượng:
-- Trả lời thẳng câu hỏi trước; sau đó nêu quy định, cách áp dụng và lưu ý nếu có.
-- Không đưa ra chuỗi suy luận nội bộ; chỉ cung cấp giải thích pháp lý có thể kiểm chứng.
-- Mỗi claim phải gắn role và citation riêng.
-- Nếu không có mâu thuẫn trực tiếp giữa các nguồn, trả conflicts=[].
-- Nếu có mâu thuẫn, phải trích cả hai phía; không đủ căn cứ phân xử thì strategy=unresolved.
-"""
         response = None
         response_text = None
         for attempt in range(MAX_GENERATION_ATTEMPTS):
             try:
-                response = self.client.models.generate_content(
-                    model=self.model_name,
-                    contents=prompt,
-                    config={
-                        "system_instruction": SYSTEM_PROMPT,
-                        "response_mime_type": "application/json",
-                        "response_json_schema": RESPONSE_JSON_SCHEMA,
-                        "max_output_tokens": 3000,
-                        "temperature": 0.1,
-                    },
+                headers = {
+                    "Authorization": f"Bearer {self.api_key}",
+                    "Content-Type": "application/json",
+                    "HTTP-Referer": "https://github.com/labor-law-rag",
+                    "X-Title": "Vietnamese Labor Law Assistant",
+                }
+                # On attempt 0, try primary model with fallback in OpenRouter models array.
+                # If attempt 0 failed (e.g. 429 rate limit on shared pool), immediately route directly to fallback_model.
+                if attempt == 0:
+                    models_list = [self.model_name]
+                    if self.fallback_model and self.fallback_model not in models_list:
+                        models_list.append(self.fallback_model)
+                else:
+                    models_list = [self.fallback_model] if self.fallback_model else [self.model_name]
+
+                payload = {
+                    "models": models_list,
+                    "messages": [
+                        {"role": "system", "content": SYSTEM_PROMPT},
+                        {"role": "user", "content": prompt},
+                    ],
+                    "response_format": {"type": "json_object"},
+                    "temperature": 0.1,
+                    "max_tokens": 3000,
+                }
+                resp = requests.post(
+                    OPENROUTER_API_URL,
+                    headers=headers,
+                    json=payload,
+                    timeout=self.timeout_seconds,
                 )
-                response_text = getattr(response, "text", None)
+                resp.raise_for_status()
+                data = resp.json()
+                choices = data.get("choices") or []
+                if choices:
+                    response_text = choices[0].get("message", {}).get("content", "")
+                response = resp
                 break
             except Exception as error:
                 code, message = _classify_api_error(error)
@@ -952,7 +1059,10 @@ Yêu cầu chất lượng:
                     or attempt == MAX_GENERATION_ATTEMPTS - 1
                 ):
                     return _failure(code, message, retrieval=retrieval_summary)
-                time.sleep(0.75 * (2**attempt))
+                delay = 0.5 if (code == "rate_limited" and self.fallback_model) else 1.5 * (attempt + 1)
+                time.sleep(delay)
+
+
 
         if not isinstance(response_text, str) or not response_text.strip():
             code = "model_refusal" if _looks_refused(response) else "empty_model_response"
@@ -963,8 +1073,9 @@ Yêu cầu chất lượng:
             )
             return _failure(code, message, retrieval=retrieval_summary)
         try:
-            payload = json.loads(response_text)
-        except json.JSONDecodeError:
+            payload = extract_json_payload(response_text)
+        except (json.JSONDecodeError, TypeError, ValueError) as e:
+            print(f"DEBUG: JSON extraction failed. Error: {e}\nRaw output: {response_text}", flush=True)
             return _failure(
                 "invalid_model_json",
                 "Mô hình không trả về JSON hợp lệ.",
@@ -974,13 +1085,16 @@ Yêu cầu chất lượng:
         valid, validation_errors, safe_payload = validate_generation_payload(
             payload, evidence_by_id
         )
+
         if not valid or safe_payload is None:
-            return _failure(
+            fail_res = _failure(
                 "citation_validation_failed",
                 "Câu trả lời bị chặn vì nội dung không được trích dẫn hỗ trợ đầy đủ.",
                 retrieval=retrieval_summary,
                 citation_errors=validation_errors,
             )
+            fail_res["raw_payload"] = payload
+            return fail_res
         safe_payload["citation_verified"] = True
         safe_payload["citation_errors"] = []
         safe_payload["retrieval"] = retrieval_summary

@@ -1,23 +1,25 @@
 {
-  "generated_at": "2026-09-27T20:47:03.058796+00:00",
+  "generated_at": "2026-09-29T08:21:34.662606+00:00",
   "schema_version": "unified_labor.chunks.v2",
-  "article_count": 1662,
-  "chunk_count": 3301,
+  "corpus_as_of": "2026-09-29",
+  "article_count": 1710,
+  "chunk_count": 3410,
   "source_type_counts": {
-    "phapdien": 1756,
+    "phapdien": 1752,
     "official_gazette": 1227,
+    "official_registry_mirror": 113,
     "legacy_verified_current": 318
   },
-  "articles_split": 619,
+  "articles_split": 639,
   "max_parts_per_article": 33,
   "structural_levels": {
-    "article": 1043,
-    "clause": 1356,
+    "article": 1071,
+    "clause": 1388,
     "clause_part": 68,
-    "point": 579,
-    "point_part": 120,
-    "structural_group": 110,
-    "preamble": 25
+    "point": 618,
+    "point_part": 122,
+    "structural_group": 116,
+    "preamble": 27
   },
   "token_length": {
     "min": 78,
@@ -36,6 +38,5 @@
     "all_chunks_have_source_url": true,
     "ocr_chunks": 0
   },
-  "forms_and_attachments_indexed": false,
-  "corpus_as_of": "2026-09-28"
+  "forms_and_attachments_indexed": false
 }

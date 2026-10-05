@@ -15,7 +15,15 @@ from generate_safe import (
     validate_generation_payload,
     verify_citations,
 )
-from retrieve_v2 import SafeRetriever, classify_query, corrected_query, decompose_query
+from retrieve_v2 import (
+    MAX_SUBQUERIES,
+    SafeRetriever,
+    classify_query,
+    corrected_query,
+    decompose_query,
+    discover_current_statuses,
+    legal_article_hints,
+)
 
 
 class TokenizerTests(unittest.TestCase):
@@ -52,6 +60,54 @@ class QueryPreparationTests(unittest.TestCase):
         query = "Gi\\u1edbi h\\u1ea1n l\\u00e0m th\\u00eam gi\\u1edd v\\u00e0 doanh nghi\\u1ec7p vi ph\\u1ea1m".encode("ascii").decode("unicode_escape")
         self.assertGreaterEqual(len(decompose_query(query)), 2)
 
+    def test_dated_verified_status_is_current(self):
+        statuses = discover_current_statuses(
+            [
+                {"status": "current_verified_vbpl_2026-09-29"},
+                {"status": "repealed"},
+            ]
+        )
+        self.assertIn("current_verified_vbpl_2026-09-29", statuses)
+        self.assertNotIn("repealed", statuses)
+
+    def test_article_hints_cover_missing_retirement_contributions(self):
+        query = (
+            "BHXH tự nguyện còn thiếu trên 6 tháng để đủ điều kiện hưởng "
+            "lương hưu thì có được đóng bù một lần không?"
+        )
+        self.assertIn(
+            ("11/2025/TT-BNV", "Điều 3"),
+            set(legal_article_hints(query)),
+        )
+
+    def test_legal_intent_expansion_covers_both_concepts(self):
+        query = "Người lao động làm thêm vào ban đêm thì điều kiện làm thêm và cách tính tiền lương thế nào?"
+        subqueries = decompose_query(query)
+        self.assertLessEqual(len(subqueries), MAX_SUBQUERIES)
+        joined = " ".join(subqueries).casefold()
+        self.assertIn("điều kiện làm thêm", joined)
+        self.assertIn("tiền lương", joined)
+
+    def test_article_hints_cover_night_overtime(self):
+        query = "Người lao động làm thêm vào ban đêm thì tính lương và giới hạn thế nào?"
+        hints = set(legal_article_hints(query))
+        self.assertIn(("18/VBHN-VPQH", "Điều 98"), hints)
+        self.assertIn(("18/VBHN-VPQH", "Điều 107"), hints)
+
+    def test_article_hints_cover_overtime_limit_and_penalty(self):
+        query = "Giới hạn làm thêm giờ và mức phạt doanh nghiệp vi phạm là gì?"
+        hints = set(legal_article_hints(query))
+        self.assertIn(("18/VBHN-VPQH", "Điều 107"), hints)
+        self.assertIn(("12/2022/NĐ-CP", "Điều 18"), hints)
+
+    def test_article_hints_cover_social_insurance_delay_calculation(self):
+        query = "Phân biệt chậm đóng và trốn đóng bảo hiểm xã hội, xác định số tiền và số ngày"
+        hints = set(legal_article_hints(query))
+        self.assertIn(("19/VBHN-VPQH", "Điều 38"), hints)
+        self.assertIn(("19/VBHN-VPQH", "Điều 39"), hints)
+        self.assertIn(("274/2025/NĐ-CP", "Điều 5"), hints)
+        self.assertIn(("274/2025/NĐ-CP", "Điều 6"), hints)
+
     def test_results_are_diverse_by_article(self):
         hits = [
             {"chunk_id": "a1", "doc_number": "A", "article_number": "1"},
@@ -61,6 +117,32 @@ class QueryPreparationTests(unittest.TestCase):
         ]
         selected = SafeRetriever._diversify_hits(hits, top_k=3)
         self.assertEqual([hit["chunk_id"] for hit in selected], ["a1", "a3", "b1"])
+
+    def test_diversification_reserves_subquery_coverage(self):
+        hits = [
+            {
+                "chunk_id": "global",
+                "doc_number": "A",
+                "article_number": "1",
+                "subquery_scores": {"full": 0.9, "intent one": 0.8},
+            },
+            {
+                "chunk_id": "second",
+                "doc_number": "B",
+                "article_number": "2",
+                "subquery_scores": {"intent two": 0.7},
+            },
+            {
+                "chunk_id": "third",
+                "doc_number": "C",
+                "article_number": "3",
+                "subquery_scores": {"intent one": 0.6},
+            },
+        ]
+        selected = SafeRetriever._diversify_hits(
+            hits, top_k=2, subqueries=["full", "intent one", "intent two"]
+        )
+        self.assertEqual({hit["chunk_id"] for hit in selected}, {"global", "second"})
 
 
 class CitationTests(unittest.TestCase):
