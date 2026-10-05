@@ -15,7 +15,7 @@ import chromadb
 from rank_bm25 import BM25Okapi
 from sentence_transformers import CrossEncoder, SentenceTransformer
 
-from build_index_v2 import vi_legal_tokenize
+from vi_tokenizer import vi_legal_tokenize
 from rag_config import SETTINGS
 
 

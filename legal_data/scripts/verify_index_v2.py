@@ -6,7 +6,7 @@ import argparse
 import json
 from pathlib import Path
 
-from build_index_v2 import file_sha256, load_chunks, verify_index
+from build_index import file_sha256, load_chunks, verify_index
 from rag_config import SETTINGS
 
 
